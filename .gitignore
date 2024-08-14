@@ -1,0 +1,9 @@
+
+# Packages
+yt-env
+
+# Folder
+youtube_profile_stats
+
+# credential file
+.env
