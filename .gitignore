@@ -7,3 +7,6 @@ youtube_profile_stats
 
 # credential file
 .env
+
+# Youtube Service account file
+configs/service_account.json
