@@ -10,3 +10,6 @@ youtube_profile_stats
 
 # Youtube Service account file
 configs/service_account.json
+
+# pycache files
+__pycache__
