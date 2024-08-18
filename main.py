@@ -11,7 +11,7 @@ if __name__ == "__main__":
     load_dotenv()
     # initialize redis client
     API_KEY = os.environ['yt_api_key']
-    CHANNEL_NAME = "@samitapednekar7026"
+    CHANNEL_NAME = "@MrBeast"
     yt_queue = []
     pipeline(api_key=API_KEY, user_name=CHANNEL_NAME, yt_queue=yt_queue)
 
