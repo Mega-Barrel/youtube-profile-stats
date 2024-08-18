@@ -13,3 +13,6 @@ configs/service_account.json
 
 # pycache files
 __pycache__
+
+# logs file
+logs/
