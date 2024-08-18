@@ -1,0 +1,609 @@
+yt-profile-stats - 2024-08-16 20:37:28,657 - extract_user_pages - INFO - Attempting call to yt_api for username: @MrBeast.
+yt-profile-stats - 2024-08-16 20:37:28,664 - _new_conn - DEBUG - Starting new HTTPS connection (1): www.googleapis.com:443
+yt-profile-stats - 2024-08-16 20:37:28,997 - _make_request - DEBUG - https://www.googleapis.com:443 "GET /youtube/v3/channels?key=AIzaSyAHxqy2sBKJeELpGDg8qnnciJLdYaFv_8E&forHandle=%40MrBeast&part=contentDetails%2CcontentOwnerDetails%2Cid%2Clocalizations%2Csnippet%2Cstatus%2CtopicDetails%2Cstatistics HTTP/1.1" 200 None
+yt-profile-stats - 2024-08-16 20:37:28,997 - extract_user_pages - INFO - API Success, received data: {
+  "kind": "youtube#channelListResponse",
+  "etag": "Ash_3qXkJP19p_mOmV1KWIFjTVk",
+  "pageInfo": {
+    "totalResults": 1,
+    "resultsPerPage": 5
+  },
+  "items": [
+    {
+      "kind": "youtube#channel",
+      "etag": "SJmyL8unHeTfTQGio6q3ma-4hMI",
+      "id": "UCX6OQ3DkcsbYNE6H8uQQuVA",
+      "snippet": {
+        "title": "MrBeast",
+        "description": "SUBSCRIBE FOR A COOKIE!\n\nAccomplishments:\n- Raised $20,000,000 To Plant 20,000,000 Trees\n- Removed 30,000,000 pounds of trash from the ocean\n- Built wells in Africa\n- helped 1,000 blind people see\n- helped 1,000 deaf people hear\n- Given millions to charity\n- Started my own snack company Feastables\n- Donated over 100 cars lol\n- Gave away a private island (twice)\n- Gave away 1 million dollars in one video\n- Counted to 100k\n- Read the Dictionary\n- Read Bee Movie Script\n- Read Longest English Word\n- Watched Paint Dry\n- Ubering Across America\n- Watched It's Every Day Bro For 10 Hours\n- Ran a marathon in the world's largest shoes\n- Adopted every dog in a shelter\n- Bought $1,000,000 in lottery tickets\n- Sold houses for $1\n- I got buried alive\n- Recreated Squid Game in real life\n- Gave away a chocolate factory\n- Gave away private jet\n- Survived 50 hours in Antarctica\nYou get the point haha\n\n\n*Do not email me asking for money, I give away money because it makes me happy :)",
+        "customUrl": "@mrbeast",
+        "publishedAt": "2012-02-20T00:43:50Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://yt3.ggpht.com/fxGKYucJAVme-Yz4fsdCroCFCrANWqw0ql4GYuvx8Uq4l_euNJHgE-w9MTkLQA805vWCi-kE0g=s88-c-k-c0x00ffffff-no-rj",
+            "width": 88,
+            "height": 88
+          },
+          "medium": {
+            "url": "https://yt3.ggpht.com/fxGKYucJAVme-Yz4fsdCroCFCrANWqw0ql4GYuvx8Uq4l_euNJHgE-w9MTkLQA805vWCi-kE0g=s240-c-k-c0x00ffffff-no-rj",
+            "width": 240,
+            "height": 240
+          },
+          "high": {
+            "url": "https://yt3.ggpht.com/fxGKYucJAVme-Yz4fsdCroCFCrANWqw0ql4GYuvx8Uq4l_euNJHgE-w9MTkLQA805vWCi-kE0g=s800-c-k-c0x00ffffff-no-rj",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "MrBeast",
+          "description": "SUBSCRIBE FOR A COOKIE!\n\nAccomplishments:\n- Raised $20,000,000 To Plant 20,000,000 Trees\n- Removed 30,000,000 pounds of trash from the ocean\n- Built wells in Africa\n- helped 1,000 blind people see\n- helped 1,000 deaf people hear\n- Given millions to charity\n- Started my own snack company Feastables\n- Donated over 100 cars lol\n- Gave away a private island (twice)\n- Gave away 1 million dollars in one video\n- Counted to 100k\n- Read the Dictionary\n- Read Bee Movie Script\n- Read Longest English Word\n- Watched Paint Dry\n- Ubering Across America\n- Watched It's Every Day Bro For 10 Hours\n- Ran a marathon in the world's largest shoes\n- Adopted every dog in a shelter\n- Bought $1,000,000 in lottery tickets\n- Sold houses for $1\n- I got buried alive\n- Recreated Squid Game in real life\n- Gave away a chocolate factory\n- Gave away private jet\n- Survived 50 hours in Antarctica\nYou get the point haha\n\n\n*Do not email me asking for money, I give away money because it makes me happy :)"
+        },
+        "country": "US"
+      },
+      "contentDetails": {
+        "relatedPlaylists": {
+          "likes": "",
+          "uploads": "UUX6OQ3DkcsbYNE6H8uQQuVA"
+        }
+      },
+      "statistics": {
+        "viewCount": "56685383832",
+        "subscriberCount": "310000000",
+        "hiddenSubscriberCount": false,
+        "videoCount": "810"
+      },
+      "topicDetails": {
+        "topicIds": [
+          "/m/02jjt",
+          "/m/019_rr"
+        ],
+        "topicCategories": [
+          "https://en.wikipedia.org/wiki/Entertainment",
+          "https://en.wikipedia.org/wiki/Lifestyle_(sociology)"
+        ]
+      },
+      "status": {
+        "privacyStatus": "public",
+        "isLinked": true,
+        "longUploadsStatus": "longUploadsUnspecified",
+        "madeForKids": false
+      },
+      "contentOwnerDetails": {},
+      "localizations": {
+        "id_ID": {
+          "title": "MrBeast",
+          "description": "SUBSCRIBE UNTUK MENDAPATKAN KUE!\nPrestasi:\n- Mengumpulkan $20,000,000 Untuk Menanam 20,000,000 Pohon\n- Menghapus 30.000.000 pon sampah dari laut\n- Membangun sumur di Afrika\n- Membantu 1.000 orang buta melihat\n- Membantu 1.000 orang tuna rungu mendengar\n- Diberikan jutaan untuk amal\n- Memulai perusahaan makanan ringan saya sendiri, Feastables\n- Menyumbangkan lebih dari 100 mobil haha\n- Memberikan pulau pribadi (dua kali)\n- Memberikan 1 juta dolar dalam satu video\n- Dihitung sampai 100k\n- Baca Kamus\n- Baca Naskah Film Lebah\n- Baca Kata Bahasa Inggris Terpanjang\n- Menyaksikan Cat Kering\n- Ubering di Seluruh Amerika\n- Ditonton Tiap Hari Gan Selama 10 Jam\n- Berlari maraton dengan sepatu terbesar di dunia\n- Mengadopsi setiap anjing di tempat penampungan\n- Menjual rumah seharga $1\n- Aku dikubur hidup-hidup\n- Game Squid yang dibuat ulang di kehidupan nyata\n- Memberikan pabrik coklat\n- Memberikan jet pribadi\n- Bertahan 50 jam di Antartika\nAnda mengerti maksudnya haha"
+        },
+        "vi_VN": {
+          "title": "MrBeast",
+          "description": "THEO DÕI \u0110\u1ec2 NH\u1eacN QUÀ!\nThành t\u1ef1u:\n- Huy \u0111\u1ed9ng \u0111\u01b0\u1ee3c 20.000.000 USD \u0111\u1ec3 tr\u1ed3ng 20.000.000 cây\n- Lo\u1ea1i b\u1ecf 30.000.000 pound rác kh\u1ecfi \u0111\u1ea1i d\u01b0\u01a1ng\n- Xây gi\u1ebfng \u1edf Châu Phi\n- Giúp 1.000 ng\u01b0\u1eddi mù nhìn th\u1ea5y \u0111\u01b0\u1ee3c\n- Giúp 1.000 ng\u01b0\u1eddi \u0111i\u1ebfc nghe \u0111\u01b0\u1ee3c\n- T\u1eb7ng hàng tri\u1ec7u \u0111ô la \u0111\u1ec3 làm t\u1eeb thi\u1ec7n\n- Thành l\u1eadp công ty \u0111\u1ed3 \u0103n nh\u1eb9 Feastables c\u1ee7a riêng mình\n- T\u1eb7ng h\u01a1n 100 xe haha\n- T\u1eb7ng \u0111\u1ea3o riêng (hai l\u1ea7n)\n- T\u1eb7ng 1 tri\u1ec7u \u0111ô la ch\u1ec9 trong m\u1ed9t video\n- \u0110\u1ebfm \u0111\u1ebfn 100k\n- \u0110\u1ecdc t\u1eeb \u0111i\u1ec3n\n- \u0110\u1ecdc k\u1ecbch b\u1ea3n phim Con Ong\n- \u0110\u1ecdc t\u1eeb ti\u1ebfng Anh dài nh\u1ea5t\n- Xem s\u01a1n khô\n- \u0110i Uber kh\u1eafp n\u01b0\u1edbc M\u1ef9\n- Xem It's Every Day Bro trong 10 gi\u1edd\n- Ch\u1ea1y marathon trên \u0111ôi giày l\u1edbn nh\u1ea5t th\u1ebf gi\u1edbi\n- Nh\u1eadn nuôi m\u1ecdi chú chó \u1edf n\u01a1i trú \u1ea9n\n- Mua vé s\u1ed1 tr\u1ecb giá 1.000.000 USD\n- Bán nhà v\u1edbi giá 1$\n- B\u1ecb chôn s\u1ed1ng\n- Trò ch\u01a1i con m\u1ef1c \u0111\u01b0\u1ee3c tái hi\u1ec7n ngoài \u0111\u1eddi th\u1ef1c\n- T\u1eb7ng m\u1ed9t nhà máy sô-cô-la\n- T\u1eb7ng máy bay riêng\n- S\u1ed1ng sót sau 50 gi\u1edd \u1edf Nam C\u1ef1c"
+        },
+        "pt_BR": {
+          "title": "MrBeast",
+          "description": "INSCREVA-SE POR UM COOKIE!\nFeitos:\n- Arrecadei $20,000,000 Para Plantar 20.000.000 Árvores\n- Removi 13.000.000 quilos de lixo do oceano\n- Construí poços na África\n- Ajudei 1.000 pessoas cegas a ver\n- Ajudei 1.000 pessoas surdas a ouvir\n- Doei milhões para a caridade\n- Abri minha própria empresa de snacks Feastables\n- Doei mais de 100 carros lol\n- Dei uma ilha privada de presente (duas vezes)\n- Dei 1 milhão de dólares de presente em um vídeo\n- Contei até 100.000\n- Li o Dicionário\n- Li o Roteiro de Bee Movie\n- Li a Palavra Mais Longa do Inglês\n- Vi uma Pintura Secar\n- Fiz Uber por Todos os EUA\n- Assisti a It's Every Day Bro por 10 Horas\n- Corri uma maratona com os maiores sapatos do mundo\n- Adotei todos os cães de um abrigo\n- Comprei $1,000,000 em bilhetes de loteria\n- Vendi casas por $1\n- Fui enterrado vivo\n- Recriei o Round 6 na vida real\n- Dei de presente uma fábrica de chocolate\n- Dei de presente um jatinho particular\n- Sobrevivi durante 50 horas na Antártida\nVocês entenderam haha"
+        },
+        "ar_EG": {
+          "title": "MrBeast - \u0645\u0633\u062a\u0631 \u0628\u064a\u0633\u062a",
+          "description": "\u0627\u0634\u062a\u0631\u0643 \u0648\u0627\u062d\u0635\u0644 \u0639\u0644\u0649 \u0642\u0637\u0639\u0629 \u062d\u0644\u0648\u0649!\n\n\u0627\u0646\u062c\u0627\u0632\u0627\u062a \u0642\u0645\u062a \u0628\u062a\u062d\u0642\u064a\u0642\u0647\u0627:\n- \u062c\u0645\u0639\u062a 20,000,000 \u062f\u0648\u0644\u0627\u0631 \u0644\u0632\u0631\u0627\u0639\u0629 20,000,000 \u0634\u062c\u0631\u0629\n- \u0625\u0632\u0627\u0644\u0629 30,000,000 \u0628\u0627\u0648\u0646\u062f \u0645\u0646 \u0627\u0644\u0642\u0645\u0627\u0645\u0629 \u0645\u0646 \u0627\u0644\u0645\u062d\u064a\u0637\n- \u0628\u0646\u064a\u062a \u0622\u0628\u0627\u0631 \u0641\u064a \u0623\u0641\u0631\u064a\u0642\u064a\u0627\n- \u0633\u0627\u0639\u062f\u062a 1,000 \u0634\u062e\u0635 \u0623\u0639\u0645\u0649 \u0639\u0644\u0649 \u0627\u0644\u0631\u0624\u064a\u0629\n- \u0633\u0627\u0639\u062f\u062a 1,000 \u0634\u062e\u0635 \u0623\u0635\u0645 \u0639\u0644\u0649 \u0627\u0644\u0633\u0645\u0639\n- \u062a\u0628\u0631\u0639\u062a \u0628\u0627\u0644\u0645\u0644\u0627\u064a\u064a\u0646 \u0644\u0644\u0623\u0639\u0645\u0627\u0644 \u0627\u0644\u062e\u064a\u0631\u064a\u0629\n- \u0628\u062f\u0623\u062a \u0634\u0631\u0643\u062a\u064a \u0627\u0644\u062e\u0627\u0635\u0629 \u0644\u0644\u0648\u062c\u0628\u0627\u062a \u0627\u0644\u062e\u0641\u064a\u0641\u0629 Feastables\n- \u062a\u0628\u0631\u0639\u062a \u0628\u0623\u0643\u062b\u0631 \u0645\u0646 100 \u0633\u064a\u0627\u0631\u0629 \u0647\u0647\u0647\n- \u0645\u0646\u062d\u062a \u062c\u0632\u064a\u0631\u0629 \u062e\u0627\u0635\u0629 (\u0645\u0631\u062a\u064a\u0646)\n- \u0648\u0647\u0628\u062a \u0645\u0644\u064a\u0648\u0646 \u062f\u0648\u0644\u0627\u0631 \u0641\u064a \u0641\u064a\u062f\u064a\u0648 \u0648\u0627\u062d\u062f\n- \u0642\u0645\u062a \u0628\u0627\u0644\u0639\u062f \u0625\u0644\u0649 100,000\n- \u0642\u0631\u0623\u062a \u0627\u0644\u0642\u0627\u0645\u0648\u0633\n- \u0642\u0631\u0623\u062a \u0646\u0635 \u0641\u064a\u0644\u0645 Bee \n- \u0642\u0631\u0623\u062a \u0623\u0637\u0648\u0644 \u0643\u0644\u0645\u0629 \u0625\u0646\u062c\u0644\u064a\u0632\u064a\u0629\n- \u0634\u0627\u0647\u062f\u062a \u0627\u0644\u0637\u0644\u0627\u0621 \u0648 \u0647\u0648 \u064a\u062c\u0641\n- \u0631\u0643\u0628\u062a \u0623\u0648\u0628\u0631 \u0639\u0628\u0631 \u0623\u0645\u0631\u064a\u0643\u0627\n- \u0634\u0627\u0647\u062f\u062a It's Every Day Bro \u0644\u0645\u062f\u0629 10 \u0633\u0627\u0639\u0627\u062a\n- \u062c\u0631\u064a\u062a \u0645\u0627\u0631\u0627\u062b\u0648\u0646 \u0628\u0623\u0643\u0628\u0631 \u062d\u0630\u0627\u0621 \u0641\u064a \u0627\u0644\u0639\u0627\u0644\u0645\n- \u062a\u0628\u0646\u064a\u062a \u0643\u0644 \u0643\u0644\u0628 \u0641\u064a \u0627\u0644\u0645\u0644\u062c\u0623\n- \u0627\u0634\u062a\u0631\u064a\u062a 1,000,000 \u062f\u0648\u0644\u0627\u0631 \u0645\u0646 \u062a\u0630\u0627\u0643\u0631 \u0627\u0644\u064a\u0627\u0646\u0635\u064a\u0628\n- \u0642\u0645\u062a \u0628\u0628\u064a\u0639 \u0645\u0646\u0627\u0632\u0644 \u0628\u062f\u0648\u0644\u0627\u0631 \u0648\u0627\u062d\u062f\n- \u062f\u064f\u0641\u0650\u0646\u062a \u062d\u064a\u0627\u064b\n- \u0623\u0639\u062f\u062a \u0627\u0646\u0634\u0627\u0621 \u0644\u0639\u0628\u0629 \u0627\u0644\u062d\u0628\u0627\u0631 \u0641\u064a \u0627\u0644\u062d\u064a\u0627\u0629 \u0627\u0644\u0648\u0627\u0642\u0639\u064a\u0629\n- \u0648\u0647\u0628\u062a \u0645\u0635\u0646\u0639 \u0634\u0648\u0643\u0648\u0644\u0627\u062a\u0629\n- \u0648\u0647\u0628\u062a \u0637\u0627\u0626\u0631\u0629 \u062e\u0627\u0635\u0629\n- \u0646\u062c\u0648\u062a 50 \u0633\u0627\u0639\u0629 \u0641\u064a \u0627\u0644\u0642\u0637\u0628 \u0627\u0644\u062c\u0646\u0648\u0628\u064a\n\u0623\u0639\u062a\u0642\u062f \u0623\u0646\u0643 \u0641\u0647\u0645\u062a \u0627\u0644\u0641\u0643\u0631\u0629 \u0647\u0647\u0647"
+        },
+        "fr_FR": {
+          "title": "MrBeast",
+          "description": "ABONNEZ-VOUS POUR UN COOKIE !\nAccomplissements :\n- 20 000 000 $ récoltés pour planter 20 000 000 d'arbres\n- Retiré 13,000,000 kilos de déchets de l'océan\n- Construit des puits en Afrique\n- Aidé 1 000 aveugles à voir\n- Aidé 1 000 sourds à entendre\n- Donné des millions de dollars à des œuvres de charité\n- Créé ma propre entreprise de snacks, Feastables\n- Fait don de plus de 100 voitures mdr\n- Offert une île privée (deux fois)\n- Donné 1 million de dollars en une seule vidéo\n- Compté jusqu'à 100 000\n- Lu le dictionnaire\n- Lu le script du film Bee\n- Lu le mot anglais le plus long\n- Regardé la peinture sécher\n- Traversé l'Amérique en Uber\n- Regardé It's Every Day Bro pendant 10 heures\n- Couru un marathon avec les plus grandes chaussures du monde\n- Adopté tous les chiens d'un refuge\n- Vendu des maisons pour 1 $.\n- J'ai été enterré vivant\n- Recréé le Squid Game dans la vraie vie\n- Donné une chocolaterie\n- Donné un jet privé\n- Survécu 50 heures en Antarctique\nVous voyez ce que je veux dire haha"
+        },
+        "ru_RU": {
+          "title": "MrBeast",
+          "description": "\u041f\u041e\u0414\u041f\u0418\u0428\u0418\u0421\u042c \u0417\u0410 \u041f\u0415\u0427\u0415\u041d\u042c\u041a\u0423!\n\u0414\u043e\u0441\u0442\u0438\u0436\u0435\u043d\u0438\u044f:\n- \u0421\u043e\u0431\u0440\u0430\u043b $20,000,000 \u0434\u043b\u044f \u041f\u043e\u0441\u0430\u0434\u043a\u0438 20,000,000 \u0414\u0435\u0440\u0435\u0432\u044c\u0435\u0432\n- \u0423\u0431\u0440\u0430\u043b 30,000,000 \u0444\u0443\u043d\u0442\u043e\u0432 \u043c\u0443\u0441\u043e\u0440\u0430 \u0438\u0437 \u043e\u043a\u0435\u0430\u043d\u0430\n- \u041f\u043e\u0441\u0442\u0440\u043e\u0438\u043b \u0441\u043a\u0432\u0430\u0436\u0438\u043d\u044b \u0432 \u0410\u0444\u0440\u0438\u043a\u0435\n- \u043f\u043e\u043c\u043e\u0433 1,000 \u043d\u0435\u0437\u0440\u044f\u0447\u0438\u043c \u043b\u044e\u0434\u044f\u043c \u0432\u0435\u0440\u043d\u0443\u0442\u044c \u0437\u0440\u0435\u043d\u0438\u0435\n- \u043f\u043e\u043c\u043e\u0433 1,000 \u0433\u043b\u0443\u0445\u0438\u043c \u043b\u044e\u0434\u044f\u043c \u0432\u0435\u0440\u043d\u0443\u0442\u044c \u0441\u043b\u0443\u0445\n- \u041f\u043e\u0436\u0435\u0440\u0442\u0432\u043e\u0432\u0430\u043b \u043c\u0438\u043b\u043b\u0438\u043e\u043d\u044b \u043d\u0430 \u0431\u043b\u0430\u0433\u043e\u0442\u0432\u043e\u0440\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u044c\n- \u0417\u0430\u043f\u0443\u0441\u0442\u0438\u043b \u0441\u0432\u043e\u044e \u043a\u043e\u043c\u043f\u0430\u043d\u0438\u044e \u043f\u043e \u043f\u0440\u043e\u0438\u0437\u0432\u043e\u0434\u0441\u0442\u0432\u0443 \u0441\u043b\u0430\u0434\u043e\u0441\u0442\u0435\u0439 Feastables\n- \u041f\u043e\u0436\u0435\u0440\u0442\u0432\u043e\u0432\u0430\u043b \u0431\u043e\u043b\u0435\u0435 100 \u043c\u0430\u0448\u0438\u043d, \u043b\u043e\u043b\n- \u041f\u043e\u0434\u0430\u0440\u0438\u043b \u0447\u0430\u0441\u0442\u043d\u044b\u0439 \u043e\u0441\u0442\u0440\u043e\u0432 (\u0434\u0432\u0430\u0436\u0434\u044b)\n- \u0420\u0430\u0437\u0434\u0430\u043b 1 \u043c\u0438\u043b\u043b\u0438\u043e\u043d \u0434\u043e\u043b\u043b\u0430\u0440\u043e\u0432 \u0432 \u043e\u0434\u043d\u043e\u043c \u0432\u0438\u0434\u0435\u043e\n- \u041f\u043e\u0441\u0447\u0438\u0442\u0430\u043b \u0434\u043e 100,000\n- \u041f\u0440\u043e\u0447\u0438\u0442\u0430\u043b \u0421\u043b\u043e\u0432\u0430\u0440\u044c\n- \u041f\u0440\u043e\u0447\u0438\u0442\u0430\u043b \u0421\u0446\u0435\u043d\u0430\u0440\u0438\u0439 \u0411\u0438 \u041c\u0443\u0432\u0438\n- \u041f\u0440\u043e\u0447\u0438\u0442\u0430\u043b \u0421\u0430\u043c\u043e\u0435 \u0414\u043b\u0438\u043d\u043d\u043e\u0435 \u0410\u043d\u0433\u043b\u0438\u0439\u0441\u043a\u043e\u0435 \u0421\u043b\u043e\u0432\u043e\n- \u0421\u043c\u043e\u0442\u0440\u0435\u043b, \u043a\u0430\u043a \u0421\u043e\u0445\u043d\u0435\u0442 \u041a\u0440\u0430\u0441\u043a\u0430\n- \u041f\u0440\u043e\u0435\u0445\u0430\u043b \u0447\u0435\u0440\u0435\u0437 \u0432\u0441\u044e \u0410\u043c\u0435\u0440\u0438\u043a\u0443 \u043d\u0430 Uber\n- \u0421\u043c\u043e\u0442\u0440\u0435\u043b \"It's Every Day Bro\" 10 \u0427\u0430\u0441\u043e\u0432\n- \u041f\u0440\u043e\u0431\u0435\u0436\u0430\u043b \u043c\u0430\u0440\u0430\u0444\u043e\u043d \u0432 \u0441\u0430\u043c\u043e\u0439 \u0431\u043e\u043b\u044c\u0448\u043e\u0439 \u043e\u0431\u0443\u0432\u0438 \u0432 \u043c\u0438\u0440\u0435\n- \u0417\u0430\u0431\u0440\u0430\u043b \u043a\u0430\u0436\u0434\u0443\u044e \u0441\u043e\u0431\u0430\u043a\u0443 \u0438\u0437 \u043f\u0440\u0438\u044e\u0442\u0430\n- \u041a\u0443\u043f\u0438\u043b \u043b\u043e\u0442\u0435\u0440\u0435\u0439\u043d\u044b\u0445 \u0431\u0438\u043b\u0435\u0442\u043e\u0432 \u043d\u0430 $1,000,000\n- \u041f\u0440\u043e\u0434\u0430\u0432\u0430\u043b \u0434\u043e\u043c\u0430 \u0437\u0430 $1\n- \u041c\u0435\u043d\u044f \u043f\u043e\u0445\u043e\u0440\u043e\u043d\u0438\u043b\u0438 \u0437\u0430\u0436\u0438\u0432\u043e\n- \u0412\u043e\u0441\u0441\u043e\u0437\u0434\u0430\u043b «\u0418\u0433\u0440\u0443 \u0432 \u041a\u0430\u043b\u044c\u043c\u0430\u0440\u0430» \u0432 \u0440\u0435\u0430\u043b\u044c\u043d\u043e\u0439 \u0436\u0438\u0437\u043d\u0438\n- \u041f\u043e\u0434\u0430\u0440\u0438\u043b \u0448\u043e\u043a\u043e\u043b\u0430\u0434\u043d\u0443\u044e \u0444\u0430\u0431\u0440\u0438\u043a\u0443\n- \u041f\u043e\u0434\u0430\u0440\u0438\u043b \u0447\u0430\u0441\u0442\u043d\u044b\u0439 \u0441\u0430\u043c\u043e\u043b\u0435\u0442\n- \u0412\u044b\u0436\u0438\u043b 50 \u0447\u0430\u0441\u043e\u0432 \u0432 \u0410\u043d\u0442\u0430\u0440\u043a\u0442\u0438\u0434\u0435\n\u041d\u0443 \u0432\u044b \u043f\u043e\u043d\u044f\u043b\u0438 \u0445\u0430\u0445\u0430"
+        },
+        "bn_BD": {
+          "title": "MrBeast",
+          "description": "A COOKIE - \u098f\u09b0 \u099c\u09a8\u09cd\u09af \u09b8\u09be\u09ac\u09b8\u09cd\u0995\u09cd\u09b0\u09be\u0987\u09ac!\n\u09b8\u09ae\u09cd\u09aa\u09be\u09a6\u09bf\u09a4 \u0995\u09be\u09b0\u09cd\u09af:\n\u09e80,000,000\u099f\u09bf \u0997\u09be\u099b \u09b2\u09be\u0997\u09be\u09a8\u09cb\u09b0 \u099c\u09a8\u09cd\u09af $\u09e80,000,000 \u09b8\u0982\u0997\u09cd\u09b0\u09b9 \u0995\u09b0\u09be \u09b9\u09af\u09bc\u09c7\u099b\u09c7\n- \u09b8\u09ae\u09c1\u09a6\u09cd\u09b0 \u09a5\u09c7\u0995\u09c7 \u09e9,000,000 \u09aa\u09be\u0989\u09a8\u09cd\u09a1 \u0986\u09ac\u09b0\u09cd\u099c\u09a8\u09be \u09b8\u09b0\u09be\u09a8\u09cb \u09b9\u09af\u09bc\u09c7\u099b\u09c7\n- \u0986\u09ab\u09cd\u09b0\u09bf\u0995\u09be\u09af\u09bc \u0995\u09c2\u09aa \u09a8\u09bf\u09b0\u09cd\u09ae\u09be\u09a3\n- \u09e7,000 \u099c\u09a8 \u09a6\u09c3\u09b7\u09cd\u099f\u09bf \u09aa\u09cd\u09b0\u09a4\u09bf\u09ac\u09a8\u09cd\u09a7\u09c0\u0995\u09c7 \u09a6\u09c7\u0996\u09a4\u09c7 \u09b8\u09be\u09b9\u09be\u09af\u09cd\u09af \u0995\u09b0\u09be \u09b9\u09df\u09c7\u099b\u09c7\u0964\n- \u09e7,000 \u09ac\u09a7\u09bf\u09b0 \u09ae\u09be\u09a8\u09c1\u09b7\u0995\u09c7 \u09b6\u09c1\u09a8\u09a4\u09c7  \u09b8\u09be\u09b9\u09be\u09af\u09cd\u09af \u0995\u09b0\u09be \u09b9\u09df\u09c7\u099b\u09c7\u0964\n- \u09a6\u09be\u09a4\u09ac\u09cd\u09af \u09aa\u09cd\u09b0\u09a4\u09bf\u09b7\u09cd\u09a0\u09be\u09a8\u09c7 \u09ae\u09bf\u09b2\u09bf\u09af\u09bc\u09a8 \u09ae\u09bf\u09b2\u09bf\u09af\u09bc\u09a8 \u09a1\u09b2\u09be\u09b0 \u09a6\u09be\u09a8 \u0995\u09b0\u09be \u09b9\u09df\u09c7\u099b\u09c7\n- \u0986\u09ae\u09be\u09b0 \u09a8\u09bf\u099c\u09c7\u09b0 \u09b8\u09cd\u09a8\u09cd\u09af\u09be\u0995 \u0995\u09cb\u09ae\u09cd\u09aa\u09be\u09a8\u09bf Feastables \u09aa\u09cd\u09b0\u09a4\u09bf\u09b7\u09cd\u09a0\u09be \u0995\u09b0\u09c7\u099b\u09bf\n- \u0986\u09ae\u09b0\u09be \u09e700 \u099f\u09bf\u09b0\u0993 \u09ac\u09c7\u09b6\u09bf \u0997\u09be\u09a1\u09bc\u09bf \u09a6\u09be\u09a8 \u0995\u09b0\u09c7\u099b\u09bf (\u09b9\u09be \u09b9\u09be)\n- \u098f\u0995\u099f\u09bf \u09ac\u09cd\u09af\u0995\u09cd\u09a4\u09bf\u0997\u09a4 \u09a6\u09cd\u09ac\u09c0\u09aa \u09a6\u09be\u09a8 \u0995\u09b0\u09be \u09b9\u09df\u09c7\u099b\u09c7 (\u09a6\u09c1\u0987\u09ac\u09be\u09b0)\n- \u098f\u0995  \u09ad\u09bf\u09a1\u09bf\u0993\u09a4\u09c7 $\u09e7  \u09ae\u09bf\u09b2\u09bf\u09af\u09bc\u09a8 \u09a1\u09b2\u09be\u09b0 \u09a6\u09be\u09a8 \u0995\u09b0\u09be \u09b9\u09df\u09c7\u099b\u09c7\n- 100k \u09aa\u09b0\u09cd\u09af\u09a8\u09cd\u09a4 \u0997\u09a3\u09a8\u09be \u0995\u09b0\u09be \u09b9\u09af\u09bc\u09c7\u099b\u09c7\n- \u0985\u09ad\u09bf\u09a7\u09be\u09a8 \u09aa\u09a1\u09bc\u09c1\u09a8\n- \u09ae\u09cc\u09ae\u09be\u099b\u09bf \u09ae\u09c1\u09ad\u09bf \u09b8\u09cd\u0995\u09cd\u09b0\u09bf\u09aa\u09cd\u099f \u09aa\u09a1\u09bc\u09c1\u09a8\n- \u09a6\u09c0\u09b0\u09cd\u0998\u09a4\u09ae \u0987\u0982\u09b0\u09c7\u099c\u09bf \u09b6\u09ac\u09cd\u09a6 \u09aa\u09a1\u09bc\u09c1\u09a8\n- \u09aa\u09c7\u0987\u09a8\u09cd\u099f \u09b6\u09c1\u0995\u09a8\u09cb \u09a6\u09c7\u0996\u09c7\u099b\u09bf\n- \u0986\u09ae\u09c7\u09b0\u09bf\u0995\u09be \u099c\u09c1\u09a1\u09bc\u09c7 \u0989\u09ac\u09be\u09b0\u09bf\u0982\n- \u09ac\u09bf\u09b6\u09cd\u09ac\u09c7\u09b0 \u09b8\u09ac\u099a\u09c7\u09af\u09bc\u09c7 \u09ac\u09a1\u09bc \u099c\u09c1\u09a4\u09be \u09aa\u09b0\u09c7 \u09ae\u09cd\u09af\u09be\u09b0\u09be\u09a5\u09a8 \u09a6\u09cc\u09a1\u09bc\u09c7\n- \u0986\u09b6\u09cd\u09b0\u09af\u09bc \u09a5\u09c7\u0995\u09c7 \u09b8\u09ac \u0995\u09c1\u0995\u09c1\u09b0 \u09a6\u09a4\u09cd\u09a4\u0995\n- \u09e7 \u09a1\u09b2\u09be\u09b0\u09c7 \u09ac\u09be\u09a1\u09bc\u09bf \u09ac\u09bf\u0995\u09cd\u09b0\u09bf \u0995\u09b0\u09be \u09b9\u09df\u09c7\u099b\u09c7\n- \u0986\u09ae\u09be\u0995\u09c7 \u099c\u09c0\u09ac\u09a8\u09cd\u09a4 \u0995\u09ac\u09b0 \u09a6\u09c7\u0993\u09af\u09bc\u09be \u09b9\u09af\u09bc\u09c7\u099b\u09c7\n- \u09ac\u09be\u09b8\u09cd\u09a4\u09ac \u099c\u09c0\u09ac\u09a8\u09c7 \u09b8\u09cd\u0995\u09c1\u0987\u09a1 \u0997\u09c7\u09ae \u09aa\u09c1\u09a8\u09b0\u09be\u09af\u09bc \u09a4\u09c8\u09b0\u09bf \u0995\u09b0\u09be \u09b9\u09af\u09bc\u09c7\u099b\u09c7\n- \u098f\u0995\u099f\u09be \u099a\u0995\u09b2\u09c7\u099f\u09c7\u09b0 \u09ab\u09cd\u09af\u09be\u0995\u09cd\u099f\u09b0\u09bf \u09a6\u09bf\u09af\u09bc\u09c7\u099b\u09bf\u0964\n- \u0985\u09cd\u09af\u09be\u09a8\u09cd\u099f\u09be\u09b0\u09cd\u0995\u099f\u09bf\u0995\u09be\u09af\u09bc 50 \u0998\u09a8\u09cd\u099f\u09be \u09ac\u09c7\u0981\u099a\u09c7 \u09a5\u09be\u0995\u09be\n\u0986\u09aa\u09a8\u09bf \u0986\u09b8\u09b2 \u09aa\u09df\u09c7\u09a8\u09cd\u099f \u09ac\u09c1\u099d\u09a4\u09c7 \u09aa\u09c7\u09b0\u09c7\u099b\u09c7\u09a8 (\u09b9\u09be\u09b9\u09be)"
+        },
+        "th_TH": {
+          "title": "\u0e21\u0e34\u0e2a\u0e40\u0e15\u0e2d\u0e23\u0e4c\u0e1a\u0e35\u0e2a\u0e15\u0e4c",
+          "description": "\u0e0b\u0e31\u0e1a\u0e2a\u0e44\u0e04\u0e23\u0e1a\u0e4c\u0e40\u0e1e\u0e37\u0e48\u0e2d \u0e04\u0e38\u0e01\u0e01\u0e35\u0e49!\n\u0e04\u0e27\u0e32\u0e21\u0e2a\u0e33\u0e40\u0e23\u0e47\u0e08:\n- \u0e23\u0e30\u0e14\u0e21\u0e17\u0e38\u0e19\u0e44\u0e14\u0e49 20,000,000 \u0e14\u0e2d\u0e25\u0e25\u0e32\u0e23\u0e4c \u0e40\u0e1e\u0e37\u0e48\u0e2d\u0e1b\u0e25\u0e39\u0e01\u0e15\u0e49\u0e19\u0e44\u0e21\u0e49 20,000,000 \u0e15\u0e49\u0e19\n- \u0e01\u0e33\u0e08\u0e31\u0e14\u0e02\u0e22\u0e30 30,000,000 \u0e1b\u0e2d\u0e19\u0e14\u0e4c\u0e2d\u0e2d\u0e01\u0e08\u0e32\u0e01\u0e21\u0e2b\u0e32\u0e2a\u0e21\u0e38\u0e17\u0e23\n- \u0e2a\u0e23\u0e49\u0e32\u0e07\u0e1a\u0e48\u0e2d\u0e19\u0e49\u0e33\u0e43\u0e19\u0e41\u0e2d\u0e1f\u0e23\u0e34\u0e01\u0e32\n- \u0e0a\u0e48\u0e27\u0e22\u0e43\u0e2b\u0e49\u0e04\u0e19\u0e15\u0e32\u0e1a\u0e2d\u0e14 1,000 \u0e04\u0e19\u0e21\u0e2d\u0e07\u0e40\u0e2b\u0e47\u0e19\u0e44\u0e14\u0e49\n- \u0e0a\u0e48\u0e27\u0e22\u0e04\u0e19\u0e2b\u0e39\u0e2b\u0e19\u0e27\u0e01 1,000 \u0e04\u0e19\u0e43\u0e2b\u0e49\u0e44\u0e14\u0e49\u0e22\u0e34\u0e19\u0e44\u0e14\u0e49\n- \u0e21\u0e2d\u0e1a\u0e40\u0e07\u0e34\u0e19\u0e01\u0e32\u0e23\u0e01\u0e38\u0e28\u0e25\u0e19\u0e31\u0e1a\u0e25\u0e49\u0e32\u0e19\n- \u0e01\u0e48\u0e2d\u0e15\u0e31\u0e49\u0e07\u0e1a\u0e23\u0e34\u0e29\u0e31\u0e17\u0e02\u0e19\u0e21 Feastables \u0e40\u0e1b\u0e47\u0e19\u0e02\u0e2d\u0e07\u0e15\u0e31\u0e27\u0e40\u0e2d\u0e07\n- \u0e1a\u0e23\u0e34\u0e08\u0e32\u0e04\u0e23\u0e16\u0e22\u0e19\u0e15\u0e4c\u0e01\u0e27\u0e48\u0e32 100 \u0e04\u0e31\u0e19 555\n- \u0e41\u0e08\u0e01\u0e40\u0e01\u0e32\u0e30\u0e2a\u0e48\u0e27\u0e19\u0e15\u0e31\u0e27 (\u0e2a\u0e2d\u0e07\u0e04\u0e23\u0e31\u0e49\u0e07)\n- \u0e41\u0e08\u0e01\u0e40\u0e07\u0e34\u0e19 1 \u0e25\u0e49\u0e32\u0e19\u0e14\u0e2d\u0e25\u0e25\u0e32\u0e23\u0e4c\u0e43\u0e19\u0e27\u0e34\u0e14\u0e35\u0e42\u0e2d\u0e40\u0e14\u0e35\u0e22\u0e27\n- \u0e19\u0e31\u0e1a\u0e16\u0e36\u0e07 100k\n- \u0e2d\u0e48\u0e32\u0e19\u0e1e\u0e08\u0e19\u0e32\u0e19\u0e38\u0e01\u0e23\u0e21\n- \u0e2d\u0e48\u0e32\u0e19\u0e2a\u0e04\u0e23\u0e34\u0e1b\u0e15\u0e4c\u0e20\u0e32\u0e1e\u0e22\u0e19\u0e15\u0e23\u0e4c Bee\n- \u0e2d\u0e48\u0e32\u0e19\u0e04\u0e33\u0e28\u0e31\u0e1e\u0e17\u0e4c\u0e20\u0e32\u0e29\u0e32\u0e2d\u0e31\u0e07\u0e01\u0e24\u0e29\u0e17\u0e35\u0e48\u0e22\u0e32\u0e27\u0e17\u0e35\u0e48\u0e2a\u0e38\u0e14\n- \u0e14\u0e39\u0e2a\u0e35\u0e41\u0e2b\u0e49\u0e07\u0e15\u0e31\u0e27\n- \u0e17\u0e48\u0e2d\u0e07\u0e44\u0e1b\u0e17\u0e31\u0e48\u0e27\u0e2d\u0e40\u0e21\u0e23\u0e34\u0e01\u0e32\u0e14\u0e49\u0e27\u0e22 Uber\n- \u0e14\u0e39 It's Every Day Bro \u0e40\u0e1b\u0e47\u0e19\u0e40\u0e27\u0e25\u0e32 10 \u0e0a\u0e31\u0e48\u0e27\u0e42\u0e21\u0e07\n- \u0e27\u0e34\u0e48\u0e07\u0e21\u0e32\u0e23\u0e32\u0e18\u0e2d\u0e19\u0e14\u0e49\u0e27\u0e22\u0e23\u0e2d\u0e07\u0e40\u0e17\u0e49\u0e32\u0e17\u0e35\u0e48\u0e43\u0e2b\u0e0d\u0e48\u0e17\u0e35\u0e48\u0e2a\u0e38\u0e14\u0e43\u0e19\u0e42\u0e25\u0e01\n- \u0e23\u0e31\u0e1a\u0e40\u0e25\u0e35\u0e49\u0e22\u0e07\u0e2a\u0e38\u0e19\u0e31\u0e02\u0e17\u0e38\u0e01\u0e15\u0e31\u0e27\u0e43\u0e19\u0e2a\u0e16\u0e32\u0e19\u0e2a\u0e07\u0e40\u0e04\u0e23\u0e32\u0e30\u0e2b\u0e4c\n- \u0e0b\u0e37\u0e49\u0e2d\u0e2a\u0e25\u0e32\u0e01\u0e25\u0e2d\u0e15\u0e40\u0e15\u0e2d\u0e23\u0e35\u0e48 1,000,000 \u0e14\u0e2d\u0e25\u0e25\u0e32\u0e23\u0e4c\n- \u0e02\u0e32\u0e22\u0e1a\u0e49\u0e32\u0e19\u0e43\u0e19\u0e23\u0e32\u0e04\u0e32 1 \u0e14\u0e2d\u0e25\u0e25\u0e32\u0e23\u0e4c\n- \u0e1c\u0e21\u0e16\u0e39\u0e01\u0e1d\u0e31\u0e07\u0e17\u0e31\u0e49\u0e07\u0e40\u0e1b\u0e47\u0e19\n- \u0e40\u0e01\u0e21 Squid Game \u0e17\u0e35\u0e48\u0e2a\u0e23\u0e49\u0e32\u0e07\u0e02\u0e36\u0e49\u0e19\u0e43\u0e2b\u0e21\u0e48\u0e43\u0e19\u0e0a\u0e35\u0e27\u0e34\u0e15\u0e08\u0e23\u0e34\u0e07\n- \u0e41\u0e08\u0e01\u0e42\u0e23\u0e07\u0e07\u0e32\u0e19\u0e0a\u0e47\u0e2d\u0e01\u0e42\u0e01\u0e41\u0e25\u0e15\n- \u0e41\u0e08\u0e01\u0e40\u0e04\u0e23\u0e37\u0e48\u0e2d\u0e07\u0e1a\u0e34\u0e19\u0e40\u0e08\u0e47\u0e15\u0e2a\u0e48\u0e27\u0e19\u0e15\u0e31\u0e27\n- \u0e23\u0e2d\u0e14\u0e0a\u0e35\u0e27\u0e34\u0e15\u0e21\u0e32\u0e44\u0e14\u0e49 50 \u0e0a\u0e31\u0e48\u0e27\u0e42\u0e21\u0e07\u0e43\u0e19\u0e17\u0e27\u0e35\u0e1b\u0e41\u0e2d\u0e19\u0e15\u0e32\u0e23\u0e4c\u0e01\u0e15\u0e34\u0e01\u0e32\n\u0e40\u0e02\u0e49\u0e32\u0e43\u0e08\u0e15\u0e23\u0e07\u0e01\u0e31\u0e19\u0e19\u0e30 555"
+        },
+        "ja_JP": {
+          "title": "\u30df\u30b9\u30bf\u30fc\u30d3\u30fc\u30b9\u30c8",
+          "description": "SUBSCRIBE UNTUK MENDAPATKAN KUE!\nPrestasi:\n- Mengumpulkan $20,000,000 Untuk Menanam 20,000,000 Pohon\n- Menghapus 30.000.000 pon sampah dari laut\n- Membangun sumur di Afrika\n- Membantu 1.000 orang buta melihat\n- Membantu 1.000 orang tuna rungu mendengar\n- Diberikan jutaan untuk amal\n- Memulai perusahaan makanan ringan saya sendiri, Feastables\n- Menyumbangkan lebih dari 100 mobil haha\n- Memberikan pulau pribadi (dua kali)\n- Memberikan 1 juta dolar dalam satu video\n- Dihitung sampai 100k\n- Baca Kamus\n- Baca Naskah Film Lebah\n- Baca Kata Bahasa Inggris Terpanjang\n- Menyaksikan Cat Kering\n- Ubering di Seluruh Amerika\n- Ditonton Tiap Hari Gan Selama 10 Jam\n- Berlari maraton dengan sepatu terbesar di dunia\n- Mengadopsi setiap anjing di tempat penampungan\n- Menjual rumah seharga $1\n- Aku dikubur hidup-hidup\n- Game Squid yang dibuat ulang di kehidupan nyata\n- Memberikan pabrik coklat\n- Memberikan jet pribadi\n- Bertahan 50 jam di Antartika\nAnda mengerti maksudnya haha"
+        },
+        "en_US": {
+          "title": "MrBeast",
+          "description": "SUBSCRIBE FOR A COOKIE!\n\nAccomplishments:\n- Raised $20,000,000 To Plant 20,000,000 Trees\n- Removed 30,000,000 pounds of trash from the ocean\n- Built wells in Africa\n- helped 1,000 blind people see\n- helped 1,000 deaf people hear\n- Given millions to charity\n- Started my own snack company Feastables\n- Donated over 100 cars lol\n- Gave away a private island (twice)\n- Gave away 1 million dollars in one video\n- Counted to 100k\n- Read the Dictionary\n- Read Bee Movie Script\n- Read Longest English Word\n- Watched Paint Dry\n- Ubering Across America\n- Watched It's Every Day Bro For 10 Hours\n- Ran a marathon in the world's largest shoes\n- Adopted every dog in a shelter\n- Bought $1,000,000 in lottery tickets\n- Sold houses for $1\n- I got buried alive\n- Recreated Squid Game in real life\n- Gave away a chocolate factory\n- Gave away private jet\n- Survived 50 hours in Antarctica\nYou get the point haha\n\n\n*Do not email me asking for money, I give away money because it makes me happy :)"
+        },
+        "ko_KR": {
+          "title": "\ubbf8\uc2a4\ud130 \ube44\uc2a4\ud2b8",
+          "description": "\ucfe0\ud0a4\ub97c \ubc1b\uace0 \uc2f6\uc740\uba74 \uad6c\ub3c5\ud558\uc138\uc694!\n\ub2ec\uc131 \uc5c5\uc801:\n- 2\ucc9c\ub9cc \uadf8\ub8e8\uc758 \ub098\ubb34\ub97c \uc2ec\uae30 \uc704\ud574 2\ucc9c\ub9cc\ub2ec\ub7ec \ubaa8\uae08\n- \ubc14\ub2e4\uc5d0\uc11c 3\ucc9c\ub9cc \ud30c\uc6b4\ub4dc\uc758 \uc4f0\ub808\uae30 \uc81c\uac70\n- \uc544\ud504\ub9ac\uce74\uc5d0 \uc6b0\ubb3c \uac74\uc124\n- 1,000\uba85\uc758 \uc2dc\uac01 \uc7a5\uc560\uc778\uc774 \ubcfc \uc218 \uc788\ub3c4\ub85d \ub3c4\uc6c0\n- 1,000\uba85\uc758 \uccad\uac01 \uc7a5\uc560\uc778\uc774 \ub4e4\uc744 \uc218 \uc788\ub3c4\ub85d \ub3c4\uc6c0\n- \uc790\uc120\ub2e8\uccb4\uc5d0 \uc218\ubc31\ub9cc \ub2ec\ub7ec \uae30\ubd80\n- \ub098\ub9cc\uc758 \uc2a4\ub0b5 \ud68c\uc0ac Feastables\ub97c \uc2dc\uc791\ud588\uc2b5\ub2c8\ub2e4.\n- \ucc28\ub7c9 100\ub300 \uc774\uc0c1 \uae30\ubd80 \u314b\u314b\u314b\n- \uac1c\uc778 \uc12c\uc744 \uc120\ubb3c\ud588\uc2b5\ub2c8\ub2e4(2\ubc88).\n- \ud55c \uc601\uc0c1\uc5d0 100\ub9cc \ub2ec\ub7ec \uae30\ubd80\n- 100,000\uae4c\uc9c0 \uc22b\uc790 \uc138\uae30\n- \uc0ac\uc804 \uc77d\uae30\n- \uafc0\ubc8c \uc601\ud654 \ub300\ubcf8 \uc77d\uae30\n- \uac00\uc7a5 \uae34 \uc601\uc5b4 \ub2e8\uc5b4 \uc77d\uae30\n- \ud398\uc778\ud2b8\uac00 \ub9c8\ub974\ub294 \uac83 \uc9c0\ucf1c\ubcf4\uae30\n- \ubbf8\uad6d \uc804\uc5ed Uber\ud0c0\uace0 \ub2e4\ub2c8\uae30\n- \ub9e4\uc77c Every Day Bro 10\uc2dc\uac04 \ub3d9\uc548 \uc2dc\uccad\ud558\uae30\n- \uc138\uacc4\uc5d0\uc11c \uac00\uc7a5 \ud070 \uc2e0\ubc1c \uc2e0\uace0 \ub9c8\ub77c\ud1a4 \uc644\uc8fc\n- \ubcf4\ud638\uc18c\uc5d0 \uc788\ub294 \ubaa8\ub4e0 \uac1c \uc785\uc591\n- 100\ub9cc \ub2ec\ub7ec \uc0c1\ub2f9\uc758 \ubcf5\uad8c \uad6c\uc785\n- \uc9d1 1\ub2ec\ub7ec\uc5d0 \ud310\ub9e4\n- \uc0b0\ucc44\ub85c \ubb3b\ud788\uae30\n- \uc624\uc9d5\uc5b4 \uac8c\uc784 \uc2e4\uc81c\ub85c \uc7ac\ud604\n- \ucd08\ucf5c\ub9bf \uacf5\uc7a5 \uc120\ubb3c\n- \uac1c\uc778\uc6a9 \uc81c\ud2b8\uae30 \uc120\ubb3c\n- \ub0a8\uadf9\uc5d0\uc11c 50\uc2dc\uac04 \uc0dd\uc874\n\uc774\ucbe4\uc774\uba74 \uc54c\uaca0\uc9c0? \u314b\u314b"
+        },
+        "tr_TR": {
+          "title": "MrBeast",
+          "description": "KURAB\u0130YE \u0130Ç\u0130N ABONE OLUN!\nBa\u015far\u0131lar:\n- 20.000.000 A\u011faç Dikmek için 20.000.000 Dolar Topland\u0131\n- Okyanustan 30.000.000 poundluk çöp kald\u0131r\u0131ld\u0131\n- Afrika'da kuyular aç\u0131ld\u0131\n- 1000 kör ki\u015finin görmesine yard\u0131mc\u0131 oldu\n- 1000 sa\u011f\u0131r ki\u015finin duymas\u0131na yard\u0131mc\u0131 oldu\n- Hay\u0131r kurumlar\u0131na milyonlar ba\u011f\u0131\u015fland\u0131\n- Kendi at\u0131\u015ft\u0131rmal\u0131k \u015firketim Feastables'\u0131 kurdum\n- 100'den fazla araba ba\u011f\u0131\u015fland\u0131 hahaha\n- Özel bir ada verdi (iki kez)\n- Bir videoda 1 milyon dolar da\u011f\u0131tt\u0131\n- 100 bine kadar say\u0131ld\u0131\n- Sözlü\u011fü Oku\n- Ar\u0131 Filmi Senaryosunu Oku\n- En Uzun \u0130ngilizce Kelimeyi Oku\n- Boya Kurumas\u0131n\u0131 \u0130zledim\n- Amerika'y\u0131 Uberledim\n- It's Every Day Bro'u 10 saat boyunca izledim\n- Dünyan\u0131n en büyük ayakkab\u0131lar\u0131yla maraton ko\u015ftu\n- Bar\u0131naktaki her köpe\u011fi sahiplendik\n- 1.000.000 dolarl\u0131k piyango bileti sat\u0131n ald\u0131\n- Evleri 1 dolara satt\u0131\n- Diri diri gömüldüm\n- Kalamar Oyunu gerçek hayatta yeniden yarat\u0131ld\u0131\n- Çikolata fabrikas\u0131n\u0131 ba\u011f\u0131\u015flad\u0131\n- Özel jet hediye edildi\n- Antarktika'da 50 saat hayatta kald\u0131\nSen anlad\u0131n haha"
+        },
+        "hi_IN": {
+          "title": "MrBeast",
+          "description": "\u090f\u0915 \u0915\u0941\u0915\u0940 \u0915\u0947 \u0932\u093f\u090f \u0938\u092c\u094d\u0938\u094d\u0915\u094d\u0930\u093e\u0907\u092c \u0915\u0930\u0947\u0902!\n\u0909\u092a\u0932\u092c\u094d\u0927\u093f\u092f\u093e\u0902:\n- 20,000,000 \u092a\u0947\u0921\u093c \u0932\u0917\u093e\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f $20,000,000 \u091c\u0941\u091f\u093e\u090f\n- \u0938\u092e\u0941\u0926\u094d\u0930 \u0938\u0947 30,000,000 \u092a\u093e\u0909\u0902\u0921 \u0915\u091a\u0930\u093e \u0939\u091f\u093e\u092f\u093e\n- \u0905\u092b\u093c\u094d\u0930\u0940\u0915\u093e \u092e\u0947\u0902 \u0915\u0941\u090f\u0901 \u092c\u0928\u0935\u093e\u092f\u0947\n- 1,000 \u0905\u0902\u0927\u0947 \u0932\u094b\u0917\u094b\u0902 \u0915\u094b \u0926\u0947\u0916\u0928\u0947 \u092e\u0947\u0902 \u092e\u0926\u0926 \u0915\u0940\n- 1,000 \u092c\u0939\u0930\u0947 \u0932\u094b\u0917\u094b\u0902 \u0915\u094b \u0938\u0941\u0928\u0928\u0947 \u092e\u0947\u0902 \u092e\u0926\u0926 \u0915\u0940\n- \u0932\u093e\u0916\u094b\u0902 \u0921\u0949\u0932\u0930 \u0926\u093e\u0928 \u092e\u0947\u0902 \u0926\u093f\u090f \n- \u0905\u092a\u0928\u0940 \u0916\u0941\u0926 \u0915\u0940 \u0938\u094d\u0928\u0948\u0915 \u0915\u0902\u092a\u0928\u0940 \u092b\u093c\u0940\u0938\u094d\u091f\u0947\u092c\u0932\u094d\u0938 \u0936\u0941\u0930\u0942 \u0915\u0940\n- 100 \u0938\u0947 \u0905\u0927\u093f\u0915 \u0915\u093e\u0930\u094b\u0902 \u0915\u093e \u0926\u093e\u0928 \u0915\u093f\u092f\u093e \n- \u090f\u0915 \u0928\u093f\u091c\u0940 \u0926\u094d\u0935\u0940\u092a \u0909\u092a\u0939\u093e\u0930 \u092e\u0947 \u0926\u093f\u092f\u093e (\u0926\u094b \u092c\u093e\u0930)\n- \u090f\u0915 \u0935\u0940\u0921\u093f\u092f\u094b \u092e\u0947\u0902 1 \u092e\u093f\u0932\u093f\u092f\u0928 \u0921\u0949\u0932\u0930 \u0926\u093f\u090f\n- 100k \u0924\u0915 \u0917\u093f\u0928\u093e\n- \u0936\u092c\u094d\u0926\u0915\u094b\u0936 \u092a\u095d\u093e\n- \u092c\u0940 \u092e\u0942\u0935\u0940 \u0915\u0940 \u0938\u094d\u0915\u094d\u0930\u093f\u092a\u094d\u091f \u092a\u095d\u0940 \n- \u0938\u092c\u0938\u0947 \u0932\u0902\u092c\u093e \u0905\u0902\u0917\u094d\u0930\u0947\u091c\u0940 \u0936\u092c\u094d\u0926 \u092a\u095d\u093e\n- \u092a\u0947\u0902\u091f \u0915\u094b \u0938\u0942\u0916\u0924\u0947 \u0939\u0941\u090f \u0926\u0947\u0916\u093e   \n- \u0905\u092e\u0947\u0930\u093f\u0915\u093e \u092d\u0930 \u092e\u0947\u0902 \u0909\u092c\u0930 \u0938\u0947 \u0918\u0941\u092e\u093e  \n- It's Every Day Bro \u0915\u094b 10 \u0918\u0902\u091f\u0947 \u0924\u0915 \u0926\u0947\u0916\u093e\n- \u0926\u0941\u0928\u093f\u092f\u093e \u0915\u0947 \u0938\u092c\u0938\u0947 \u092c\u0921\u093c\u0947 \u091c\u0942\u0924\u094b\u0902 \u092e\u0947\u0902 \u092e\u0948\u0930\u093e\u0925\u0928 \u0926\u094c\u0921\u093c\u093e\n- \u090f\u0915 \u0906\u0936\u094d\u0930\u092f \u092e\u0947 \u0938\u0947 \u0939\u0930 \u0915\u0941\u0924\u094d\u0924\u0947 \u0915\u094b \u0905\u092a\u0928\u093e\u092f\u093e\n- $1,000,000 \u0915\u0940 \u0932\u0949\u091f\u0930\u0940 \u091f\u093f\u0915\u091f\u0947\u0902 \u0916\u0930\u0940\u0926\u0940\u0902\n- 1 \u0921\u0949\u0932\u0930 \u092e\u0947\u0902 \u092e\u0915\u093e\u0928 \u092c\u0947\u091a\u0947\n- \u092e\u0941\u091d\u0947 \u091c\u093f\u0902\u0926\u093e \u0926\u092b\u0928\u093e \u0926\u093f\u092f\u093e \u0917\u092f\u093e\n- \u0935\u093e\u0938\u094d\u0924\u0935\u093f\u0915 \u091c\u0940\u0935\u0928 \u092e\u0947\u0902 \u0938\u094d\u0915\u094d\u0935\u093f\u0921 \u0917\u0947\u092e \u092c\u0928\u093e\u092f\u093e\n- \u090f\u0915 \u091a\u0949\u0915\u0932\u0947\u091f \u092b\u0948\u0915\u094d\u091f\u094d\u0930\u0940 \u0926\u0947 \u0926\u0940\n- \u092a\u094d\u0930\u093e\u0907\u0935\u0947\u091f \u091c\u0947\u091f \u0926\u0947 \u0926\u093f\u092f\u093e\n- \u0905\u0902\u091f\u093e\u0930\u094d\u0915\u091f\u093f\u0915\u093e \u092e\u0947\u0902 50 \u0918\u0902\u091f\u0947 \u091c\u0940\u0935\u093f\u0924 \u0930\u0939\u093e\n\u0906\u092a\u0915\u094b \u0938\u092e\u091d \u0906 \u0930\u0939\u093e \u0939\u0948 \u0928 \u0939\u093e\u0939\u093e"
+        },
+        "es_ES": {
+          "title": "MrBeast",
+          "description": "¡SUSCRÍBETE POR UNA GALLETA!\nLogros completados:\n- Recaudé 20,000,000 de dólares para plantar 20,000,000 de árboles\n- Recogí 13,000,000 de kilos de basura del océano\n- Construí pozos en África\n- Ayudé a ver a 1,000 personas con ceguera\n- Ayudé a oír a 1,000 personas con sordera.\n- Doné millones a la caridad\n- Creé mi propia empresa de snacks Feastables\n- Doné más de 100 autos\n- Regalé una isla privada (dos veces)\n- Regalé 1 millón de dólares en un video\n- Conté hasta 100,000\n- Leí el diccionario\n- Leí el guión de Bee Movie\n- Leí la palabra en inglés más larga\n- Vi cómo se seca la pintura\n- Hice de Uber por todo el país\n- Vi It's Every Day Bro durante 10 horas\n- Corrí un maratón con los zapatos más grandes del mundo\n- Adopté a todos los perros de un refugio\n- Compré billetes de lotería por un valor de 1,000,000 de dólares\n- Vendí casas por 1 dólar\n- Me enterraron vivo\n- Regalé una fábrica de chocolate\n- Regalé un jet privado\n- Sobreviví 50 horas en la Antártida\nYa entendieron jaja."
+        }
+      }
+    }
+  ]
+}
+
+yt-profile-stats - 2024-08-16 20:41:25,667 - extract_user_pages - INFO - Attempting call to yt_api for username: @AirbyteHQ.
+yt-profile-stats - 2024-08-16 20:41:25,682 - _new_conn - DEBUG - Starting new HTTPS connection (1): www.googleapis.com:443
+yt-profile-stats - 2024-08-16 20:41:25,948 - _make_request - DEBUG - https://www.googleapis.com:443 "GET /youtube/v3/channels?key=AIzaSyAHxqy2sBKJeELpGDg8qnnciJLdYaFv_8E&forHandle=%40AirbyteHQ&part=contentDetails%2CcontentOwnerDetails%2Cid%2Clocalizations%2Csnippet%2Cstatus%2CtopicDetails%2Cstatistics HTTP/1.1" 200 None
+yt-profile-stats - 2024-08-16 20:41:25,948 - extract_user_pages - INFO - API Success, received data: {
+  "kind": "youtube#channelListResponse",
+  "etag": "RcNNHikcGXBKKmjiGdd7p2u41zA",
+  "pageInfo": {
+    "totalResults": 1,
+    "resultsPerPage": 5
+  },
+  "items": [
+    {
+      "kind": "youtube#channel",
+      "etag": "e35qBEm89x60RK68RTjipzzuv-g",
+      "id": "UCQ_JWEFzs1_INqdhIO3kmrw",
+      "snippet": {
+        "title": "Airbyte",
+        "description": "Airbyte.com is the leading open data movement platform that syncs data from the largest catalog of structured and unstructured sources - applications, files, APIs & databases - to (vector) databases, warehouses and lakes.\n\nSubscribe to our newsletter: https://airbyte.com/newsletter?utm_source=youtube\nLearn more about Airbyte: https://airbyte.com\nGitHub repo: https://github.com/airbytehq/airbyte\n\n",
+        "customUrl": "@airbytehq",
+        "publishedAt": "2020-04-08T01:01:07.209408Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://yt3.ggpht.com/PwMktJE9nhUTBA9phdltpUgBJ6X5Hov9XwjARRyvmgd7DIaqVwN7SpoV77rfTja-NDmGuFK7oA=s88-c-k-c0x00ffffff-no-rj",
+            "width": 88,
+            "height": 88
+          },
+          "medium": {
+            "url": "https://yt3.ggpht.com/PwMktJE9nhUTBA9phdltpUgBJ6X5Hov9XwjARRyvmgd7DIaqVwN7SpoV77rfTja-NDmGuFK7oA=s240-c-k-c0x00ffffff-no-rj",
+            "width": 240,
+            "height": 240
+          },
+          "high": {
+            "url": "https://yt3.ggpht.com/PwMktJE9nhUTBA9phdltpUgBJ6X5Hov9XwjARRyvmgd7DIaqVwN7SpoV77rfTja-NDmGuFK7oA=s800-c-k-c0x00ffffff-no-rj",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "localized": {
+          "title": "Airbyte",
+          "description": "Airbyte.com is the leading open data movement platform that syncs data from the largest catalog of structured and unstructured sources - applications, files, APIs & databases - to (vector) databases, warehouses and lakes.\n\nSubscribe to our newsletter: https://airbyte.com/newsletter?utm_source=youtube\nLearn more about Airbyte: https://airbyte.com\nGitHub repo: https://github.com/airbytehq/airbyte\n\n"
+        },
+        "country": "US"
+      },
+      "contentDetails": {
+        "relatedPlaylists": {
+          "likes": "",
+          "uploads": "UUQ_JWEFzs1_INqdhIO3kmrw"
+        }
+      },
+      "statistics": {
+        "viewCount": "911789",
+        "subscriberCount": "8320",
+        "hiddenSubscriberCount": false,
+        "videoCount": "312"
+      },
+      "topicDetails": {
+        "topicIds": [
+          "/m/019_rr",
+          "/m/07c1v",
+          "/m/01k8wb"
+        ],
+        "topicCategories": [
+          "https://en.wikipedia.org/wiki/Lifestyle_(sociology)",
+          "https://en.wikipedia.org/wiki/Technology",
+          "https://en.wikipedia.org/wiki/Knowledge"
+        ]
+      },
+      "status": {
+        "privacyStatus": "public",
+        "isLinked": true,
+        "longUploadsStatus": "longUploadsUnspecified"
+      },
+      "contentOwnerDetails": {}
+    }
+  ]
+}
+
+yt-profile-stats - 2024-08-16 20:41:25,948 - <module> - INFO - Call successful.
+yt-profile-stats - 2024-08-17 14:46:40,582 - extract_user_pages - INFO - Attempting call to yt_api for username: @BizarreBub.
+yt-profile-stats - 2024-08-17 14:46:40,598 - _new_conn - DEBUG - Starting new HTTPS connection (1): www.googleapis.com:443
+yt-profile-stats - 2024-08-17 14:46:40,785 - _make_request - DEBUG - https://www.googleapis.com:443 "GET /youtube/v3/channels?key=AIzaSyAHxqy2sBKJeELpGDg8qnnciJLdYaFv_8E&forHandle=%40BizarreBub&part=contentDetails%2CcontentOwnerDetails%2Cid%2Clocalizations%2Csnippet%2Cstatus%2CtopicDetails%2Cstatistics HTTP/1.1" 200 None
+yt-profile-stats - 2024-08-17 14:46:40,801 - extract_user_pages - INFO - API Success, received data: {
+  "kind": "youtube#channelListResponse",
+  "etag": "-n1vudPDoj2xnjstKQmyiaGukDw",
+  "pageInfo": {
+    "totalResults": 1,
+    "resultsPerPage": 5
+  },
+  "items": [
+    {
+      "kind": "youtube#channel",
+      "etag": "40RRsase4gZinHxzBGjSeNy8EHw",
+      "id": "UCn7Ef9w8dTXyk9kNgti9aWw",
+      "snippet": {
+        "title": "BizarreBub",
+        "description": "I make scary videos. Enjoy!",
+        "customUrl": "@bizarrebub",
+        "publishedAt": "2016-10-13T04:56:30Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://yt3.ggpht.com/ytc/AIdro_msW9GXi5NiXd9FSHdq2A8fhGoyYEsJCKbWRJiFIrZIo8Q=s88-c-k-c0x00ffffff-no-rj",
+            "width": 88,
+            "height": 88
+          },
+          "medium": {
+            "url": "https://yt3.ggpht.com/ytc/AIdro_msW9GXi5NiXd9FSHdq2A8fhGoyYEsJCKbWRJiFIrZIo8Q=s240-c-k-c0x00ffffff-no-rj",
+            "width": 240,
+            "height": 240
+          },
+          "high": {
+            "url": "https://yt3.ggpht.com/ytc/AIdro_msW9GXi5NiXd9FSHdq2A8fhGoyYEsJCKbWRJiFIrZIo8Q=s800-c-k-c0x00ffffff-no-rj",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "localized": {
+          "title": "BizarreBub",
+          "description": "I make scary videos. Enjoy!"
+        },
+        "country": "US"
+      },
+      "contentDetails": {
+        "relatedPlaylists": {
+          "likes": "",
+          "uploads": "UUn7Ef9w8dTXyk9kNgti9aWw"
+        }
+      },
+      "statistics": {
+        "viewCount": "394051591",
+        "subscriberCount": "2060000",
+        "hiddenSubscriberCount": false,
+        "videoCount": "135"
+      },
+      "topicDetails": {
+        "topicIds": [
+          "/m/019_rr",
+          "/m/098wr",
+          "/m/02jjt",
+          "/m/02vxn"
+        ],
+        "topicCategories": [
+          "https://en.wikipedia.org/wiki/Lifestyle_(sociology)",
+          "https://en.wikipedia.org/wiki/Society",
+          "https://en.wikipedia.org/wiki/Entertainment",
+          "https://en.wikipedia.org/wiki/Film"
+        ]
+      },
+      "status": {
+        "privacyStatus": "public",
+        "isLinked": true,
+        "longUploadsStatus": "longUploadsUnspecified",
+        "madeForKids": false
+      },
+      "contentOwnerDetails": {}
+    }
+  ]
+}
+
+yt-profile-stats - 2024-08-17 15:50:37,236 - extract_user_pages - INFO - Attempting call to yt_api for username: @BizarreBub.
+yt-profile-stats - 2024-08-17 15:50:37,246 - _new_conn - DEBUG - Starting new HTTPS connection (1): www.googleapis.com:443
+yt-profile-stats - 2024-08-17 15:50:37,450 - _make_request - DEBUG - https://www.googleapis.com:443 "GET /youtube/v3/channels?key=AIzaSyAHxqy2sBKJeELpGDg8qnnciJLdYaFv_8E&forHandle=%40BizarreBub&part=contentDetails%2CcontentOwnerDetails%2Cid%2Clocalizations%2Csnippet%2Cstatus%2CtopicDetails%2Cstatistics HTTP/1.1" 200 None
+yt-profile-stats - 2024-08-17 15:50:37,453 - extract_user_pages - INFO - API Success, received data: {
+  "kind": "youtube#channelListResponse",
+  "etag": "2MtuPG7n4BCIgk4Cu2XIfaRaK0w",
+  "pageInfo": {
+    "totalResults": 1,
+    "resultsPerPage": 5
+  },
+  "items": [
+    {
+      "kind": "youtube#channel",
+      "etag": "CC22iYT9gj55x5e1iV66qrWQ29M",
+      "id": "UCn7Ef9w8dTXyk9kNgti9aWw",
+      "snippet": {
+        "title": "BizarreBub",
+        "description": "I make scary videos. Enjoy!",
+        "customUrl": "@bizarrebub",
+        "publishedAt": "2016-10-13T04:56:30Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://yt3.ggpht.com/ytc/AIdro_msW9GXi5NiXd9FSHdq2A8fhGoyYEsJCKbWRJiFIrZIo8Q=s88-c-k-c0x00ffffff-no-rj",
+            "width": 88,
+            "height": 88
+          },
+          "medium": {
+            "url": "https://yt3.ggpht.com/ytc/AIdro_msW9GXi5NiXd9FSHdq2A8fhGoyYEsJCKbWRJiFIrZIo8Q=s240-c-k-c0x00ffffff-no-rj",
+            "width": 240,
+            "height": 240
+          },
+          "high": {
+            "url": "https://yt3.ggpht.com/ytc/AIdro_msW9GXi5NiXd9FSHdq2A8fhGoyYEsJCKbWRJiFIrZIo8Q=s800-c-k-c0x00ffffff-no-rj",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "localized": {
+          "title": "BizarreBub",
+          "description": "I make scary videos. Enjoy!"
+        },
+        "country": "US"
+      },
+      "contentDetails": {
+        "relatedPlaylists": {
+          "likes": "",
+          "uploads": "UUn7Ef9w8dTXyk9kNgti9aWw"
+        }
+      },
+      "statistics": {
+        "viewCount": "394051591",
+        "subscriberCount": "2060000",
+        "hiddenSubscriberCount": false,
+        "videoCount": "135"
+      },
+      "topicDetails": {
+        "topicIds": [
+          "/m/02jjt",
+          "/m/019_rr",
+          "/m/02vxn",
+          "/m/098wr"
+        ],
+        "topicCategories": [
+          "https://en.wikipedia.org/wiki/Entertainment",
+          "https://en.wikipedia.org/wiki/Lifestyle_(sociology)",
+          "https://en.wikipedia.org/wiki/Film",
+          "https://en.wikipedia.org/wiki/Society"
+        ]
+      },
+      "status": {
+        "privacyStatus": "public",
+        "isLinked": true,
+        "longUploadsStatus": "longUploadsUnspecified",
+        "madeForKids": false
+      },
+      "contentOwnerDetails": {}
+    }
+  ]
+}
+
+yt-profile-stats - 2024-08-17 15:50:45,366 - extract_user_pages - INFO - Attempting call to yt_api for username: @BizarreBub.
+yt-profile-stats - 2024-08-17 15:50:45,366 - _new_conn - DEBUG - Starting new HTTPS connection (1): www.googleapis.com:443
+yt-profile-stats - 2024-08-17 15:50:45,569 - _make_request - DEBUG - https://www.googleapis.com:443 "GET /youtube/v3/channels?key=AIzaSyAHxqy2sBKJeELpGDg8qnnciJLdYaFv_8E&forHandle=%40BizarreBub&part=contentDetails%2CcontentOwnerDetails%2Cid%2Clocalizations%2Csnippet%2Cstatus%2CtopicDetails%2Cstatistics HTTP/1.1" 200 None
+yt-profile-stats - 2024-08-17 15:50:45,572 - extract_user_pages - INFO - API Success, received data: {
+  "kind": "youtube#channelListResponse",
+  "etag": "-n1vudPDoj2xnjstKQmyiaGukDw",
+  "pageInfo": {
+    "totalResults": 1,
+    "resultsPerPage": 5
+  },
+  "items": [
+    {
+      "kind": "youtube#channel",
+      "etag": "40RRsase4gZinHxzBGjSeNy8EHw",
+      "id": "UCn7Ef9w8dTXyk9kNgti9aWw",
+      "snippet": {
+        "title": "BizarreBub",
+        "description": "I make scary videos. Enjoy!",
+        "customUrl": "@bizarrebub",
+        "publishedAt": "2016-10-13T04:56:30Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://yt3.ggpht.com/ytc/AIdro_msW9GXi5NiXd9FSHdq2A8fhGoyYEsJCKbWRJiFIrZIo8Q=s88-c-k-c0x00ffffff-no-rj",
+            "width": 88,
+            "height": 88
+          },
+          "medium": {
+            "url": "https://yt3.ggpht.com/ytc/AIdro_msW9GXi5NiXd9FSHdq2A8fhGoyYEsJCKbWRJiFIrZIo8Q=s240-c-k-c0x00ffffff-no-rj",
+            "width": 240,
+            "height": 240
+          },
+          "high": {
+            "url": "https://yt3.ggpht.com/ytc/AIdro_msW9GXi5NiXd9FSHdq2A8fhGoyYEsJCKbWRJiFIrZIo8Q=s800-c-k-c0x00ffffff-no-rj",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "localized": {
+          "title": "BizarreBub",
+          "description": "I make scary videos. Enjoy!"
+        },
+        "country": "US"
+      },
+      "contentDetails": {
+        "relatedPlaylists": {
+          "likes": "",
+          "uploads": "UUn7Ef9w8dTXyk9kNgti9aWw"
+        }
+      },
+      "statistics": {
+        "viewCount": "394051591",
+        "subscriberCount": "2060000",
+        "hiddenSubscriberCount": false,
+        "videoCount": "135"
+      },
+      "topicDetails": {
+        "topicIds": [
+          "/m/019_rr",
+          "/m/098wr",
+          "/m/02jjt",
+          "/m/02vxn"
+        ],
+        "topicCategories": [
+          "https://en.wikipedia.org/wiki/Lifestyle_(sociology)",
+          "https://en.wikipedia.org/wiki/Society",
+          "https://en.wikipedia.org/wiki/Entertainment",
+          "https://en.wikipedia.org/wiki/Film"
+        ]
+      },
+      "status": {
+        "privacyStatus": "public",
+        "isLinked": true,
+        "longUploadsStatus": "longUploadsUnspecified",
+        "madeForKids": false
+      },
+      "contentOwnerDetails": {}
+    }
+  ]
+}
+
+yt-profile-stats - 2024-08-17 15:50:59,282 - extract_user_pages - INFO - Attempting call to yt_api for username: @BizarreBub.
+yt-profile-stats - 2024-08-17 15:50:59,286 - _new_conn - DEBUG - Starting new HTTPS connection (1): www.googleapis.com:443
+yt-profile-stats - 2024-08-17 15:50:59,476 - _make_request - DEBUG - https://www.googleapis.com:443 "GET /youtube/v3/channels?key=AIzaSyAHxqy2sBKJeELpGDg8qnnciJLdYaFv_8E&forHandle=%40BizarreBub&part=contentDetails%2CcontentOwnerDetails%2Cid%2Clocalizations%2Csnippet%2Cstatus%2CtopicDetails%2Cstatistics HTTP/1.1" 200 None
+yt-profile-stats - 2024-08-17 15:50:59,476 - extract_user_pages - INFO - API Success, received data: {
+  "kind": "youtube#channelListResponse",
+  "etag": "-n1vudPDoj2xnjstKQmyiaGukDw",
+  "pageInfo": {
+    "totalResults": 1,
+    "resultsPerPage": 5
+  },
+  "items": [
+    {
+      "kind": "youtube#channel",
+      "etag": "40RRsase4gZinHxzBGjSeNy8EHw",
+      "id": "UCn7Ef9w8dTXyk9kNgti9aWw",
+      "snippet": {
+        "title": "BizarreBub",
+        "description": "I make scary videos. Enjoy!",
+        "customUrl": "@bizarrebub",
+        "publishedAt": "2016-10-13T04:56:30Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://yt3.ggpht.com/ytc/AIdro_msW9GXi5NiXd9FSHdq2A8fhGoyYEsJCKbWRJiFIrZIo8Q=s88-c-k-c0x00ffffff-no-rj",
+            "width": 88,
+            "height": 88
+          },
+          "medium": {
+            "url": "https://yt3.ggpht.com/ytc/AIdro_msW9GXi5NiXd9FSHdq2A8fhGoyYEsJCKbWRJiFIrZIo8Q=s240-c-k-c0x00ffffff-no-rj",
+            "width": 240,
+            "height": 240
+          },
+          "high": {
+            "url": "https://yt3.ggpht.com/ytc/AIdro_msW9GXi5NiXd9FSHdq2A8fhGoyYEsJCKbWRJiFIrZIo8Q=s800-c-k-c0x00ffffff-no-rj",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "localized": {
+          "title": "BizarreBub",
+          "description": "I make scary videos. Enjoy!"
+        },
+        "country": "US"
+      },
+      "contentDetails": {
+        "relatedPlaylists": {
+          "likes": "",
+          "uploads": "UUn7Ef9w8dTXyk9kNgti9aWw"
+        }
+      },
+      "statistics": {
+        "viewCount": "394051591",
+        "subscriberCount": "2060000",
+        "hiddenSubscriberCount": false,
+        "videoCount": "135"
+      },
+      "topicDetails": {
+        "topicIds": [
+          "/m/019_rr",
+          "/m/098wr",
+          "/m/02jjt",
+          "/m/02vxn"
+        ],
+        "topicCategories": [
+          "https://en.wikipedia.org/wiki/Lifestyle_(sociology)",
+          "https://en.wikipedia.org/wiki/Society",
+          "https://en.wikipedia.org/wiki/Entertainment",
+          "https://en.wikipedia.org/wiki/Film"
+        ]
+      },
+      "status": {
+        "privacyStatus": "public",
+        "isLinked": true,
+        "longUploadsStatus": "longUploadsUnspecified",
+        "madeForKids": false
+      },
+      "contentOwnerDetails": {}
+    }
+  ]
+}
+
+yt-profile-stats - 2024-08-17 15:54:24,218 - extract_user_pages - INFO - Attempting call to yt_api for username: @samitapednekar7026.
+yt-profile-stats - 2024-08-17 15:54:24,218 - _new_conn - DEBUG - Starting new HTTPS connection (1): www.googleapis.com:443
+yt-profile-stats - 2024-08-17 15:54:24,546 - _make_request - DEBUG - https://www.googleapis.com:443 "GET /youtube/v3/channels?key=AIzaSyAHxqy2sBKJeELpGDg8qnnciJLdYaFv_8E&forHandle=%40samitapednekar7026&part=contentDetails%2CcontentOwnerDetails%2Cid%2Clocalizations%2Csnippet%2Cstatus%2CtopicDetails%2Cstatistics HTTP/1.1" 200 None
+yt-profile-stats - 2024-08-17 15:54:24,562 - extract_user_pages - INFO - API Success, received data: {
+  "kind": "youtube#channelListResponse",
+  "etag": "UsGnjCX5CSg2E0BIHzg7M14T_pI",
+  "pageInfo": {
+    "totalResults": 1,
+    "resultsPerPage": 5
+  },
+  "items": [
+    {
+      "kind": "youtube#channel",
+      "etag": "U-0tIrkYBGUZOyyWpEFw5K7XyzM",
+      "id": "UCYkZCYGh4PevT-fclqCn7Nw",
+      "snippet": {
+        "title": "Samita Pednekar Vlogs",
+        "description": "Hi I am Samita Pednekar, I have my passion towards Bollywood dance. Welcomes you all to this channel where you will get to see lots of reels which will keep you entertained.\n\nI am a mom to two kids( Sara and Reyaan). This Chanel will also vlog our experiences, travel places, cooking recipes and family experiences.\n\nI am a Goan by heart and reside in California. I want to be an inspiration to my friends and family by becoming a part of your daily entertainment life.\n\nPlease support and encourage to like, share and subscribe my YouTube channel to grow and reach places.\n\nSee you in different vlogs .. chao..",
+        "customUrl": "@samitapednekar7026",
+        "publishedAt": "2013-09-04T19:00:21Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://yt3.ggpht.com/kLB4FSCvCIj9QYEeps1NzREDXk49A-Qx8C1Eihi210IolX2L78HuCdArlLQDAm4QlcbYLQILyg=s88-c-k-c0x00ffffff-no-rj",
+            "width": 88,
+            "height": 88
+          },
+          "medium": {
+            "url": "https://yt3.ggpht.com/kLB4FSCvCIj9QYEeps1NzREDXk49A-Qx8C1Eihi210IolX2L78HuCdArlLQDAm4QlcbYLQILyg=s240-c-k-c0x00ffffff-no-rj",
+            "width": 240,
+            "height": 240
+          },
+          "high": {
+            "url": "https://yt3.ggpht.com/kLB4FSCvCIj9QYEeps1NzREDXk49A-Qx8C1Eihi210IolX2L78HuCdArlLQDAm4QlcbYLQILyg=s800-c-k-c0x00ffffff-no-rj",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "localized": {
+          "title": "Samita Pednekar Vlogs",
+          "description": "Hi I am Samita Pednekar, I have my passion towards Bollywood dance. Welcomes you all to this channel where you will get to see lots of reels which will keep you entertained.\n\nI am a mom to two kids( Sara and Reyaan). This Chanel will also vlog our experiences, travel places, cooking recipes and family experiences.\n\nI am a Goan by heart and reside in California. I want to be an inspiration to my friends and family by becoming a part of your daily entertainment life.\n\nPlease support and encourage to like, share and subscribe my YouTube channel to grow and reach places.\n\nSee you in different vlogs .. chao.."
+        }
+      },
+      "contentDetails": {
+        "relatedPlaylists": {
+          "likes": "",
+          "uploads": "UUYkZCYGh4PevT-fclqCn7Nw"
+        }
+      },
+      "statistics": {
+        "viewCount": "11566",
+        "subscriberCount": "59",
+        "hiddenSubscriberCount": false,
+        "videoCount": "32"
+      },
+      "topicDetails": {
+        "topicIds": [
+          "/m/03glg",
+          "/m/019_rr",
+          "/m/028sqc"
+        ],
+        "topicCategories": [
+          "https://en.wikipedia.org/wiki/Hobby",
+          "https://en.wikipedia.org/wiki/Lifestyle_(sociology)",
+          "https://en.wikipedia.org/wiki/Music_of_Asia"
+        ]
+      },
+      "status": {
+        "privacyStatus": "public",
+        "isLinked": true,
+        "longUploadsStatus": "longUploadsUnspecified"
+      },
+      "contentOwnerDetails": {}
+    }
+  ]
+}
+
