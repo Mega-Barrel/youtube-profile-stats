@@ -19,27 +19,42 @@ def create_partitioned_table() -> None:
     """
     schema = [
         bigquery.SchemaField(
-            "page_id", 
+            "_id", 
             field_type="STRING",
-            description="Notion Page ID"
+            description="UNIQUE _id for every API request"
         ),
         bigquery.SchemaField(
             "created_at", 
-            "TIMESTAMP", 
-            description="Question CreatedAt"
+            field_type="TIMESTAMP", 
+            description="record inserted at"
+        ),
+        bigquery.SchemaField(
+            "response", 
+            field_type="JSON", 
+            description="RAW JSON payload for YT API"
+        ),
+        bigquery.SchemaField(
+            "response_status_code", 
+            field_type="INTEGER", 
+            description="status code for YT API"
+        ),
+        bigquery.SchemaField(
+            "is_success", 
+            field_type="boolean", 
+            description="Boolean field to indicate, if request to YT API was success."
         )
     ]
 
-    table = bigquery.Table(_table_id, schema=schema)
-    table.time_partitioning = bigquery.TimePartitioning(
-        type_= bigquery.TimePartitioningType.DAY,
-        field = "created_at",  # name of column to use for partitioning
-    )
+    # table = bigquery.Table(_table_id, schema=schema)
+    # table.time_partitioning = bigquery.TimePartitioning(
+    #     type_= bigquery.TimePartitioningType.DAY,
+    #     field = "created_at",  # name of column to use for partitioning
+    # )
 
-    table = _client.create_table(table)
+    # table = _client.create_table(table)
 
-    print(
-        f"Created table {_table_id}, "
-        f"partitioned on column {table.time_partitioning.field}."
-    )
+    # print(
+    #     f"Created table {_table_id}, "
+    #     f"partitioned on column {table.time_partitioning.field}."
+    # )
 
