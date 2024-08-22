@@ -12,8 +12,5 @@ if __name__ == "__main__":
     # initialize redis client
     API_KEY = os.environ['yt_api_key']
     CHANNEL_NAME = "@MrBeast"
-    yt_queue = []
-    pipeline(api_key=API_KEY, user_name=CHANNEL_NAME, yt_queue=yt_queue)
-
+    pipeline(api_key=API_KEY, user_name=CHANNEL_NAME)
     print('Finished executing script..')
-    print(yt_queue)
