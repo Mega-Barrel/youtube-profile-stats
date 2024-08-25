@@ -30,15 +30,16 @@ class YouTubeProfileWatcher:
                 print('extracting data', retries)
                 if json_data[1] == 200:
                     data = self.transform_data(response=json_data)
-                    # print(data)
                     self.dump_data_to_db(data=data)
                     break
                 else:
                     print('Error something happned while extracting data')
                     yt_logger.warning("Retrying for user: %s, attempts left: %s", user_name, retries-1)
             except Exception as e:
+                json_data = self.extract_user_pages(user_name)
+                data = self.transform_data(response=json_data)
+                self.dump_data_to_db(data=data)
                 print("Error processing data for user %s: %s", user_name, str(e))
-                print('retrying')
                 yt_logger.error("Error processing data for user %s: %s", user_name, str(e))
             retries -= 1
             sleep(5)
@@ -53,15 +54,14 @@ class YouTubeProfileWatcher:
                 "https://www.googleapis.com/youtube/v3/channels",
                 params={
                     "key": self.api_key,
-                    "forHandle": user_name,
+                    "forHandle": "@" + user_name,
                     "part": "contentDetails,contentOwnerDetails,id,localizations,snippet,status,topicDetails,statistics"
                 },
                 timeout=30
             )
             response.raise_for_status()
-            # yt_logger.info("API Success for %s: %s", user_name, response.text)
-            print(response.status_code)
-            return (response.text, response.status_code)
+            yt_logger.info("API Success for %s: %s", user_name, response.text)
+            return (response.text, response.status_code, user_name)
         except requests.exceptions.HTTPError as http_err:
             yt_logger.error("HTTP error occurred for %s: %s", user_name, str(http_err))
         except requests.exceptions.RequestException as req_err:
@@ -70,40 +70,69 @@ class YouTubeProfileWatcher:
 
     def transform_data(self, response):
         """Transforms raw API response data into a structured format."""
-        if response[1] != 200 or response[0] is None:
-            raise ValueError("Invalid response or status code")
+        resp = json.loads(response[0])
+        status_code = response[1]
+        username = response[2]
+        current_time = datetime.now(timezone.utc)
 
-        try:
-            current_time = datetime.now(timezone.utc)
-            resp = json.loads(response[0])
+        if status_code == 200 and 'items' not in resp:
             yt_data = {
                 '_id': str(uuid.uuid4()),  # Generate a unique ID,
                 'created_at': current_time.strftime('%Y-%m-%dT%H:%M:%S.%f')[:-3] + 'Z',
-                'response_status_code': response[1],
-                'is_success': True if response[1] == 200 else False,
+                'username': username,
+                'is_username_found': True if not 'items' in resp else False,
+                'response': str(resp),
+                'response_status_code': status_code,
+                'is_success': True,
 
-                'channel_type': resp['items'][0].get('kind'),
-                'channel_name': resp['items'][0]['snippet'].get('title'),
-                'channel_id': resp['items'][0].get('id'),
-                'channel_description': resp['items'][0]['snippet'].get('description', '').replace('\n\n', ' '),
-                'channel_created_at': resp['items'][0]['snippet'].get('publishedAt'),
-                'channel_logo': resp['items'][0]['snippet']['thumbnails']['high'].get('url'),
-                'channel_country': resp['items'][0]['snippet'].get('country'),
-                'channel_view_count': resp['items'][0]['statistics'].get('viewCount'),
-                'channel_subscriber_count': resp['items'][0]['statistics'].get('subscriberCount'),
-                'is_hidden_subscriber': resp['items'][0]['statistics'].get('hiddenSubscriberCount'),
-                'channel_video_count': resp['items'][0]['statistics'].get('videoCount'),
-                'privacy_channel_type': resp['items'][0]['status'].get('privacyStatus'),
-                'is_channel_linked': resp['items'][0]['status'].get('isLinked'),
-                'long_upload_allowed': resp['items'][0]['status'].get('longUploadsStatus'),
-                'is_kid_safe': resp['items'][0]['status'].get('madeForKids')
+                'channel_type': None,
+                'channel_id': None,
+                'channel_description': None,
+                'channel_created_at': None,
+                'channel_logo': None,
+                'channel_country': None,
+                'channel_view_count': None,
+                'channel_subscriber_count': None,
+                'is_hidden_subscriber': None,
+                'channel_video_count': None,
+                'privacy_channel_type': None,
+                'is_channel_linked': None,
+                'long_upload_allowed': None,
+                'is_kid_safe': None
             }
-
-            yt_logger.info("API Success")
+            yt_logger.debug("No data found for username")
             return yt_data
-        except (KeyError, IndexError) as e:
-            yt_logger.error("Error transforming data: %s", str(e))
-            raise
+        else:
+            try:
+                yt_data = {
+                    '_id': str(uuid.uuid4()),  # Generate a unique ID,
+                    'created_at': current_time.strftime('%Y-%m-%dT%H:%M:%S.%f')[:-3] + 'Z',
+                    'username': username if 'title' not in resp else resp['items'][0]['snippet'].get('title'),
+                    'is_username_found': False,
+                    'response': str(resp),
+                    'response_status_code': status_code,
+                    'is_success': True,
+
+                    'channel_type': resp['items'][0].get('kind'),
+                    'channel_id': resp['items'][0].get('id'),
+                    'channel_description': resp['items'][0]['snippet'].get('description', '').replace('\n\n', ' '),
+                    'channel_created_at': resp['items'][0]['snippet'].get('publishedAt'),
+                    'channel_logo': resp['items'][0]['snippet']['thumbnails']['high'].get('url'),
+                    'channel_country': resp['items'][0]['snippet'].get('country'),
+                    'channel_view_count': resp['items'][0]['statistics'].get('viewCount'),
+                    'channel_subscriber_count': resp['items'][0]['statistics'].get('subscriberCount'),
+                    'is_hidden_subscriber': resp['items'][0]['statistics'].get('hiddenSubscriberCount'),
+                    'channel_video_count': resp['items'][0]['statistics'].get('videoCount'),
+                    'privacy_channel_type': resp['items'][0]['status'].get('privacyStatus'),
+                    'is_channel_linked': resp['items'][0]['status'].get('isLinked'),
+                    'long_upload_allowed': resp['items'][0]['status'].get('longUploadsStatus'),
+                    'is_kid_safe': resp['items'][0]['status'].get('madeForKids')
+                }
+                yt_logger.info("API Success")
+                return yt_data
+            except (KeyError, IndexError) as e:
+                yt_logger.error("Error transforming data: %s", str(e))
+                raise
 
     def dump_data_to_db(self, data):
         """Inserts transformed data into a BigQuery table."""
