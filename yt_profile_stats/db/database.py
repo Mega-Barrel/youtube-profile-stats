@@ -79,6 +79,23 @@ class BigQueryOperations:
                 description="Timestamp of the API call"
             ),
             bigquery.SchemaField(
+                "username",
+                "STRING",
+                description="ID of the channel"
+            ),
+            bigquery.SchemaField(
+                "is_username_found",
+                "BOOL",
+                mode="REQUIRED",
+                description="checks if username exists."
+            ),
+            bigquery.SchemaField(
+                "response",
+                "STRING",
+                mode="REQUIRED",
+                description="RAW response.text from YouTube_API"
+            ),
+            bigquery.SchemaField(
                 "response_status_code",
                 "INTEGER",
                 mode="REQUIRED",
@@ -90,15 +107,12 @@ class BigQueryOperations:
                 mode="REQUIRED",
                 description="Indicates success if response_status_code is 200"
             ),
+
+
             bigquery.SchemaField(
                 "channel_type",
                 "STRING",
                 description="Type of the channel"
-            ),
-            bigquery.SchemaField(
-                "channel_name",
-                "STRING",
-                description="Name of the channel"
             ),
             bigquery.SchemaField(
                 "channel_id",
