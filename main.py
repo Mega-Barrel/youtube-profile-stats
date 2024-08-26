@@ -11,7 +11,7 @@ if __name__ == "__main__":
     load_dotenv()
     # initialize redis client
     API_KEY = os.environ['yt_api_key']
-    CHANNEL_NAME = "RanveerAllahbadiaasada"
+    CHANNEL_NAME = "BeerBiceps"
     DATASET_NAME = 'yt_stats'
     TABLE_NAME = 'yt_profile_stats'
     yt_pipeline = YouTubeProfileWatcher(
