@@ -25,19 +25,20 @@ class YouTubeProfileWatcher:
         """Orchestrates the ETL pipeline for fetching and processing YouTube profile data."""
         retries = 3
         while retries > 0:
+            json_data = self.extract_user_pages(user_name)
+            resp = json.loads(json_data[0])
+            status_code = json_data[1]
             try:
-                json_data = self.extract_user_pages(user_name)
                 print('extracting data', retries)
-                if json_data[1] == 200:
-                    data = self.transform_data(response=json_data)
+                if status_code == 200:
+                    data = self.transform_data(resp=resp, status_code=status_code, username=user_name)
                     self.dump_data_to_db(data=data)
                     break
                 else:
                     print('Error something happned while extracting data')
                     yt_logger.warning("Retrying for user: %s, attempts left: %s", user_name, retries-1)
             except Exception as e:
-                json_data = self.extract_user_pages(user_name)
-                data = self.transform_data(response=json_data)
+                data = self.transform_data(resp=resp, status_code=status_code, username=user_name)
                 self.dump_data_to_db(data=data)
                 print("Error processing data for user %s: %s", user_name, str(e))
                 yt_logger.error("Error processing data for user %s: %s", user_name, str(e))
@@ -68,19 +69,16 @@ class YouTubeProfileWatcher:
             yt_logger.error("Request error occurred for %s: %s", user_name, str(req_err))
         return (None, 500)
 
-    def transform_data(self, response):
+    def transform_data(self, resp, status_code, username):
         """Transforms raw API response data into a structured format."""
-        resp = json.loads(response[0])
-        status_code = response[1]
-        username = response[2]
         current_time = datetime.now(timezone.utc)
 
-        if status_code == 200 and 'items' not in resp:
+        if status_code == 200 and 'items' not in str(resp):
             yt_data = {
                 '_id': str(uuid.uuid4()),  # Generate a unique ID,
                 'created_at': current_time.strftime('%Y-%m-%dT%H:%M:%S.%f')[:-3] + 'Z',
                 'username': username,
-                'is_username_found': True if not 'items' in resp else False,
+                'is_username_found': True if 'items' in str(resp) else False,
                 'response': str(resp),
                 'response_status_code': status_code,
                 'is_success': True,
@@ -108,7 +106,7 @@ class YouTubeProfileWatcher:
                     '_id': str(uuid.uuid4()),  # Generate a unique ID,
                     'created_at': current_time.strftime('%Y-%m-%dT%H:%M:%S.%f')[:-3] + 'Z',
                     'username': username if 'title' not in resp else resp['items'][0]['snippet'].get('title'),
-                    'is_username_found': False,
+                    'is_username_found': True if 'items' in str(resp) else False,
                     'response': str(resp),
                     'response_status_code': status_code,
                     'is_success': True,
