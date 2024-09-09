@@ -11,7 +11,7 @@ import requests
 
 # File base imports
 from yt_profile_stats.yt_logger.logger import yt_logger
-from yt_profile_stats.db.database import BigQueryOperations
+# from yt_profile_stats.db.database import BigQueryOperations
 
 class YouTubeProfileWatcher:
     """ YouTube API Pipeline """
@@ -19,7 +19,7 @@ class YouTubeProfileWatcher:
     def __init__(self, api_key, dataset_name, table_name):
         # , dataset_name, table_name
         self.api_key = api_key
-        self.bq_operations = BigQueryOperations(dataset_name=dataset_name, table_name=table_name)
+        # self.bq_operations = BigQueryOperations(dataset_name=dataset_name, table_name=table_name)
 
     def run_pipeline(self, user_name):
         """Orchestrates the ETL pipeline for fetching and processing YouTube profile data."""
@@ -32,14 +32,14 @@ class YouTubeProfileWatcher:
                 print('extracting data', retries)
                 if status_code == 200:
                     data = self.transform_data(resp=resp, status_code=status_code, username=user_name)
-                    self.dump_data_to_db(data=data)
+                    # self.dump_data_to_db(data=data)
                     break
                 else:
                     print('Error something happned while extracting data')
                     yt_logger.warning("Retrying for user: %s, attempts left: %s", user_name, retries-1)
             except Exception as e:
                 data = self.transform_data(resp=resp, status_code=status_code, username=user_name)
-                self.dump_data_to_db(data=data)
+                # self.dump_data_to_db(data=data)
                 print("Error processing data for user %s: %s", user_name, str(e))
                 yt_logger.error("Error processing data for user %s: %s", user_name, str(e))
             retries -= 1
@@ -132,8 +132,8 @@ class YouTubeProfileWatcher:
                 yt_logger.error("Error transforming data: %s", str(e))
                 raise
 
-    def dump_data_to_db(self, data):
-        """Inserts transformed data into a BigQuery table."""
-        # Wrap data in a list as insert_rows_json expects a list of rows
-        rows_to_insert = [data]
-        self.bq_operations.insert_data(rows_to_insert=rows_to_insert)
+    # def dump_data_to_db(self, data):
+    #     """Inserts transformed data into a BigQuery table."""
+    #     # Wrap data in a list as insert_rows_json expects a list of rows
+    #     rows_to_insert = [data]
+    #     self.bq_operations.insert_data(rows_to_insert=rows_to_insert)
