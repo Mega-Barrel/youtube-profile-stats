@@ -10,7 +10,7 @@ from datetime import datetime, timezone
 import requests
 
 # File base imports
-from yt_profile_stats.yt_logger.logger import yt_logger
+# from yt_profile_stats.# yt_logger.logger import # yt_logger
 # from yt_profile_stats.db.database import BigQueryOperations
 
 class YouTubeProfileWatcher:
@@ -36,20 +36,20 @@ class YouTubeProfileWatcher:
                     break
                 else:
                     print('Error something happned while extracting data')
-                    yt_logger.warning("Retrying for user: %s, attempts left: %s", user_name, retries-1)
+                    # yt_logger.warning("Retrying for user: %s, attempts left: %s", user_name, retries-1)
             except Exception as e:
                 data = self.transform_data(resp=resp, status_code=status_code, username=user_name)
                 # self.dump_data_to_db(data=data)
                 print("Error processing data for user %s: %s", user_name, str(e))
-                yt_logger.error("Error processing data for user %s: %s", user_name, str(e))
+                # yt_logger.error("Error processing data for user %s: %s", user_name, str(e))
             retries -= 1
             sleep(5)
         else:
-            yt_logger.error("Failed to process data for user %s after multiple attempts.", user_name)
+            # yt_logger.error("Failed to process data for user %s after multiple attempts.", user_name)
 
     def extract_user_pages(self, user_name):
         """Fetches YouTube profile data via the YouTube API."""
-        yt_logger.info('Attempting API call to YouTube API for username: %s', user_name)
+        # yt_logger.info('Attempting API call to YouTube API for username: %s', user_name)
         try:
             response = requests.get(
                 "https://www.googleapis.com/youtube/v3/channels",
@@ -61,12 +61,14 @@ class YouTubeProfileWatcher:
                 timeout=30
             )
             response.raise_for_status()
-            yt_logger.info("API Success for %s: %s", user_name, response.text)
+            # yt_logger.info("API Success for %s: %s", user_name, response.text)
             return (response.text, response.status_code, user_name)
         except requests.exceptions.HTTPError as http_err:
-            yt_logger.error("HTTP error occurred for %s: %s", user_name, str(http_err))
+            print(http_err)
+            # yt_logger.error("HTTP error occurred for %s: %s", user_name, str(http_err))
         except requests.exceptions.RequestException as req_err:
-            yt_logger.error("Request error occurred for %s: %s", user_name, str(req_err))
+            print(req_err)
+            # yt_logger.error("Request error occurred for %s: %s", user_name, str(req_err))
         return (None, 500)
 
     def transform_data(self, resp, status_code, username):
@@ -98,7 +100,7 @@ class YouTubeProfileWatcher:
                 'long_upload_allowed': None,
                 'is_kid_safe': None
             }
-            yt_logger.debug("No data found for username")
+            # yt_logger.debug("No data found for username")
             return yt_data
         else:
             try:
@@ -126,10 +128,11 @@ class YouTubeProfileWatcher:
                     'long_upload_allowed': resp['items'][0]['status'].get('longUploadsStatus'),
                     'is_kid_safe': resp['items'][0]['status'].get('madeForKids')
                 }
-                yt_logger.info("API Success")
+                # yt_logger.info("API Success")
                 return yt_data
             except (KeyError, IndexError) as e:
-                yt_logger.error("Error transforming data: %s", str(e))
+                print(e)
+                # yt_logger.error("Error transforming data: %s", str(e))
                 raise
 
     # def dump_data_to_db(self, data):

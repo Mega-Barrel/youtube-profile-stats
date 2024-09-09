@@ -8,7 +8,7 @@ from google.cloud import bigquery
 from google.oauth2 import service_account
 from google.cloud.exceptions import NotFound
 
-from yt_profile_stats.yt_logger.logger import yt_logger
+# from yt_profile_stats.yt_logger.logger import yt_logger
 
 class BigQueryOperations:
     """Encapsulates operations for interacting with BigQuery tables."""
@@ -195,6 +195,7 @@ class BigQueryOperations:
         errors = self._client.insert_rows_json(self._table_id, rows_to_insert)
         if not errors:
             print("New rows have been added.")
-            yt_logger.info("Data inserted into BigQuery successfully!")
+            # yt_logger.info("Data inserted into BigQuery successfully!")
         else:
-            yt_logger.error("Encountered errors while inserting rows: %s", errors)
+            print("Encountered errors while inserting rows: %s", errors)
+            # yt_logger.error("Encountered errors while inserting rows: %s", errors)
