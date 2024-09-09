@@ -45,6 +45,7 @@ class YouTubeProfileWatcher:
             retries -= 1
             sleep(5)
         else:
+            print("Failed to process data for user %s after multiple attempts.", user_name)
             # yt_logger.error("Failed to process data for user %s after multiple attempts.", user_name)
 
     def extract_user_pages(self, user_name):
