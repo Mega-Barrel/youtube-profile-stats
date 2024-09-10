@@ -10,16 +10,15 @@ from datetime import datetime, timezone
 import requests
 
 # File base imports
-# from yt_profile_stats.# yt_logger.logger import # yt_logger
+# from yt_profile_stats.yt_logger.logger import yt_logger
 # from yt_profile_stats.db.database import BigQueryOperations
 
 class YouTubeProfileWatcher:
     """ YouTube API Pipeline """
 
-    def __init__(self, api_key, dataset_name, table_name):
-        # , dataset_name, table_name
+    def __init__(self, api_key):
         self.api_key = api_key
-        # self.bq_operations = BigQueryOperations(dataset_name=dataset_name, table_name=table_name)
+        # self.bq_operations = BigQueryOperations()
 
     def run_pipeline(self, user_name):
         """Orchestrates the ETL pipeline for fetching and processing YouTube profile data."""
