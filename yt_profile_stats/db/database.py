@@ -1,7 +1,6 @@
 """ Big Query DB for handling table CURD operations"""
 
 import os
-from time import sleep
 
 from dotenv import load_dotenv
 from google.cloud import bigquery
@@ -13,12 +12,12 @@ from google.cloud.exceptions import NotFound
 class BigQueryOperations:
     """Encapsulates operations for interacting with BigQuery tables."""
 
-    def __init__(self, dataset_name, table_name) -> None:
+    def __init__(self) -> None:
         """Initializes the BigQuery client and checks for dataset/table existence."""
         load_dotenv()
-        self._project_id = os.getenv("project_id")
-        self._dataset_name = dataset_name
-        self._table_name = table_name
+        self._project_id = os.getenv("PROJECT_ID")
+        self._dataset_name = os.getenv("DATASET_ID")
+        self._table_name = os.getenv("TABLE_ID")
         self._table_id = f"{self._project_id}.{self._dataset_name}.{self._table_name}"
         self.credentials = service_account.Credentials.from_service_account_file(
             "configs/service_account.json"
@@ -191,7 +190,6 @@ class BigQueryOperations:
 
     def insert_data(self, rows_to_insert: list[dict]) -> None:
         """Inserts data into the table."""
-        sleep(10)
         errors = self._client.insert_rows_json(self._table_id, rows_to_insert)
         if not errors:
             print("New rows have been added.")
