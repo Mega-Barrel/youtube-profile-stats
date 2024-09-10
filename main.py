@@ -12,12 +12,8 @@ if __name__ == "__main__":
     # initialize redis client
     API_KEY = os.environ['YT_API_KEY']
     CHANNEL_NAME = "BeerBiceps"
-    DATASET_NAME = 'yt_stats'
-    TABLE_NAME = 'yt_profile_stats'
     yt_pipeline = YouTubeProfileWatcher(
-        api_key=API_KEY,
-        dataset_name=DATASET_NAME,
-        table_name=TABLE_NAME
+        api_key=API_KEY
     )
     yt_pipeline.run_pipeline(user_name=CHANNEL_NAME)
     print('Finished executing script..')
