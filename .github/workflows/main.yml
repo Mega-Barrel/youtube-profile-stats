@@ -2,27 +2,34 @@ name: run main.py
 
 on:
   schedule:
-    - cron: '*/5 * * * *' # Every minute 5.
+    - cron: '*/5 * * * *' # Every 5 minutes.
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: setup python
+      - name: Setup Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.9' # install the python version needed
+          python-version: '3.9'
 
-      - name: install python packages
+      - name: Install Python packages
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          
-      - name: execute py script # run main.py
+
+      - name: Set up Google Cloud credentials
+        run: echo "${{ secrets.GCP_CREDENTIALS }}" > $HOME/gcloud.json
+
+      - name: Authenticate with Google Cloud
+        run: |
+          gcloud auth activate-service-account --key-file=$HOME/gcloud.json
+          export GOOGLE_APPLICATION_CREDENTIALS="$HOME/gcloud.json"
+
+      - name: Execute Python script
         env:
           YT_API_KEY: ${{ secrets.YT_API_KEY }}
         run: python main.py
