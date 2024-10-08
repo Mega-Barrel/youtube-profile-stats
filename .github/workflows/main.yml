@@ -22,7 +22,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Set up Google Cloud credentials
-        run: echo "${{ secrets.GCP_CREDENTIALS }}" > $HOME/gcloud.json
+        run: echo "${{ secrets.GCP_CREDENTIALS_BASE64 }}" | base64 --decode > $HOME/gcloud.json
 
       - name: Authenticate with Google Cloud
         run: |
