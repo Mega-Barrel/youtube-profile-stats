@@ -15,6 +15,6 @@ def run_pipeline(channel_name):
     dump_data_to_db(raw_data=transform_data(resp=json_data))
 
 if __name__ == "__main__":
-    CHANNEL_NAME = 'pinkvilla'
+    CHANNEL_NAME = 'BeerBiceps'
     run_pipeline(channel_name=CHANNEL_NAME)
     print('Finished Executing Script..')
