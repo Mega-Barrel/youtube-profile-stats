@@ -9,12 +9,14 @@ from google.oauth2 import service_account
 from google.cloud.exceptions import NotFound
 
 load_dotenv()
+# Get the path to the service account file from the environment variable
+__CREDENTIALS = os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
 __PROJECT_ID = os.getenv("PROJECT_ID")
 __DATASET_NAME = os.getenv("DATASET_ID")
 __TABLE_NAME = os.getenv("TABLE_ID")
 __TABLE_ID = f"{__PROJECT_ID}.{__DATASET_NAME}.{__TABLE_NAME}"
 credentials = service_account.Credentials.from_service_account_file(
-    "configs/service_account.json"
+    __CREDENTIALS
 )
 
 _client = bigquery.Client(
