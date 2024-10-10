@@ -39,3 +39,4 @@ jobs:
         env:
           YT_API_KEY: ${{ secrets.YT_API_KEY }}
           GOOGLE_APPLICATION_CREDENTIALS: /tmp/gcloud.json  # Ensure this is
+        run: python main.py
