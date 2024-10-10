@@ -35,9 +35,6 @@ jobs:
           export GOOGLE_APPLICATION_CREDENTIALS="/tmp/gcloud.json"
           gcloud auth activate-service-account --key-file=$GOOGLE_APPLICATION_CREDENTIALS
 
-      - name: Debug Environment Variables
-        run: echo "GOOGLE_APPLICATION_CREDENTIALS is set to: $GOOGLE_APPLICATION_CREDENTIALS"
-
       - name: Execute Python script
         env:
           YT_API_KEY: ${{ secrets.YT_API_KEY }}
