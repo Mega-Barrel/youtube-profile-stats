@@ -2,7 +2,7 @@ name: run main.py
 
 on:
   schedule:
-    - cron: '*/1 * * * *' # Every 5 minutes.
+    - cron: '*/1 * * * *' # Every 1 minutes.
 
 jobs:
   build:
@@ -22,15 +22,23 @@ jobs:
           pip install -r requirements.txt
 
       - name: Set up Google Cloud credentials
-        run: echo "${{ secrets.GCP_CREDENTIALS_BASE64 }}" | base64 --decode > $HOME/gcloud.json
+        run: echo "${{ secrets.GCP_CREDENTIALS_BASE64 }}" | base64 --decode > /tmp/gcloud.json
+
+      - name: Check gcloud.json file size
+        run: ls -l /tmp/gcloud.json
+
+      - name: Check content of gcloud.json
+        run: cat /tmp/gcloud.json
 
       - name: Authenticate with Google Cloud
         run: |
-          export GOOGLE_APPLICATION_CREDENTIALS="$HOME/gcloud.json"
+          export GOOGLE_APPLICATION_CREDENTIALS="/tmp/gcloud.json"
           gcloud auth activate-service-account --key-file=$GOOGLE_APPLICATION_CREDENTIALS
+
+      - name: Debug Environment Variables
+        run: echo "GOOGLE_APPLICATION_CREDENTIALS is set to: $GOOGLE_APPLICATION_CREDENTIALS"
 
       - name: Execute Python script
         env:
           YT_API_KEY: ${{ secrets.YT_API_KEY }}
-          GOOGLE_APPLICATION_CREDENTIALS: $HOME/gcloud.json  # Ensure this is set for the script
-        run: python main.py
+          GOOGLE_APPLICATION_CREDENTIALS: /tmp/gcloud.json  # Ensure this is
