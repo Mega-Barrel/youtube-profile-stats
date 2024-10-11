@@ -1,8 +1,8 @@
-name: run main.py
+name: YouTube API Pipeline
 
 on:
   schedule:
-    - cron: '*/1 * * * *' # Every 1 minutes.
+    - cron: '0 0 * * *' # Every 00 Hour.
 
 jobs:
   build:
@@ -23,12 +23,6 @@ jobs:
 
       - name: Set up Google Cloud credentials
         run: echo "${{ secrets.GCP_CREDENTIALS_BASE64 }}" | base64 --decode > /tmp/gcloud.json
-
-      - name: Check gcloud.json file size
-        run: ls -l /tmp/gcloud.json
-
-      - name: Check content of gcloud.json
-        run: cat /tmp/gcloud.json
 
       - name: Authenticate with Google Cloud
         run: |
