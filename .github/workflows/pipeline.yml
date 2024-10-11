@@ -38,5 +38,8 @@ jobs:
       - name: Execute Python script
         env:
           YT_API_KEY: ${{ secrets.YT_API_KEY }}
+          PROJECT_ID: ${{ secrets.PROJECT_ID }}
+          DATASET_ID: ${{ secrets.DATASET_ID }}
+          TABLE_ID: ${{ secrets.TABLE_ID }}
           GOOGLE_APPLICATION_CREDENTIALS: /tmp/gcloud.json  # Ensure this is
         run: python main.py
