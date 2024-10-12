@@ -33,6 +33,7 @@ def db_helper() -> None:
     if not table_exists():
         create_partitioned_table()
         sleep(4)
+    sleep(1)
 
 def dataset_exists() -> bool:
     """Checks if a dataset exists in the project."""
