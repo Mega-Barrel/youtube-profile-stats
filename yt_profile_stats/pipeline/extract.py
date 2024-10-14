@@ -3,9 +3,6 @@
 import os
 import json
 import requests
-from dotenv import load_dotenv
-
-load_dotenv()
 
 def extract_user_pages(channel_name):
     """Fetches YouTube profile data via the YouTube API."""
