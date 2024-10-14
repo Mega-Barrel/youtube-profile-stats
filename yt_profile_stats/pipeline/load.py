@@ -15,7 +15,7 @@ def dump_data_to_db(resp):
     # create a dict to append meta-data
     raw_data = {
         '_id': str(uuid.uuid4()),
-        'ingested_time': current_time.strftime('%Y-%m-%dT%H:%M:%S.%f')[:-3] + 'Z',
+        'ingested_date': current_time.strftime('%Y-%m-%d'),
         'response': str(resp[0]),
         'status_code': resp[1],
         'channel_name': resp[2]
@@ -26,7 +26,6 @@ def dump_data_to_db(resp):
 
     # Wrap data in a list as insert_rows_json expects a list of rows
     rows_to_insert = [raw_data]
-    insert_data(
+    return insert_data(
         rows_to_insert=rows_to_insert
     )
-    return "Inserted data to BQ"
