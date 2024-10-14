@@ -9,6 +9,7 @@ from google.oauth2 import service_account
 from google.cloud.exceptions import NotFound
 
 load_dotenv()
+
 # Get the path to the service account file from the environment variable
 __CREDENTIALS = os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
 __PROJECT_ID = os.getenv("PROJECT_ID")
@@ -32,8 +33,7 @@ def db_helper() -> None:
 
     if not table_exists():
         create_partitioned_table()
-        sleep(4)
-    sleep(1)
+    sleep(2)
 
 def dataset_exists() -> bool:
     """Checks if a dataset exists in the project."""
@@ -69,10 +69,10 @@ def create_partitioned_table() -> None:
             description="Unique ID call made to Youtube API"
         ),
         bigquery.SchemaField(
-            "ingested_time",
-            "TIMESTAMP",
+            "ingested_date",
+            "DATE",
             mode="REQUIRED",
-            description="Timestamp of the API call"
+            description="Date of the API call (YYYY-MM-DD)"
         ),
         bigquery.SchemaField(
             "response",
@@ -96,10 +96,15 @@ def create_partitioned_table() -> None:
     table = bigquery.Table(__TABLE_ID, schema=schema)
     table.time_partitioning = bigquery.TimePartitioning(
         type_=bigquery.TimePartitioningType.DAY,
-        field="ingested_time",
+        field="ingested_date",
     )
-    table = _client.create_table(table)
-    return
+    try:
+        table = _client.create_table(table)
+        print(f"Table {__TABLE_ID} created successfully.")
+        sleep(10)
+    except Exception as e:
+        print(f"Error creating table: {e}")
+        return False
 
 def insert_data(rows_to_insert: list[dict]) -> None:
     """Inserts data into the table."""
