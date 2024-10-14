@@ -2,7 +2,8 @@ name: YouTube API Pipeline
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Every 00 Hour.
+    # - cron: '0 0 * * *' # Every 00 Hour.
+    - cron: '*/2 * * * *'
 
 jobs:
   build:
