@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: staging
+    description: "A starter dbt model"
+    columns:
+      - name: response
+        description: "RAW API Response"
+        tests:
+          - not_null
+      - name: channel_title
+        description: "YouTube Channel Name"
