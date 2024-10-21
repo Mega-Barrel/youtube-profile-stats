@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: staging
+  - name: stg_yt_profile_stats
     description: "A starter dbt model"
     columns:
       - name: response
