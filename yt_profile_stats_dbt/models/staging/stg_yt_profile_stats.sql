@@ -14,7 +14,7 @@ WITH raw_data AS (
     FROM
         {{ source('yt_profile_stats', 'yt_profile_stats') }}
     WHERE
-        ingested_date > '2024-10-25'
+        ingested_date >= '2024-10-25'
 )
 
 SELECT
@@ -29,7 +29,6 @@ SELECT
     JSON_EXTRACT_SCALAR(response, '$.items[0].snippet.country') AS country_code,
     JSON_EXTRACT_SCALAR(response, '$.items[0].statistics.viewCount') AS viewCount,
     JSON_EXTRACT_SCALAR(response, '$.items[0].statistics.subscriberCount') AS subscriberCount,
-    JSON_EXTRACT_SCALAR(response, '$.items[0].statistics.videoCount') AS video_count,
     JSON_EXTRACT_SCALAR(response, '$.items[0].kind') AS youtube_channel_type,
     JSON_EXTRACT_SCALAR(response, '$.items[0].snippet.customUrl') AS channel_custom_url
 FROM
