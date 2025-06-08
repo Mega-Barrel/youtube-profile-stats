@@ -1,26 +1,41 @@
-""" Main method to hit api """
+""" Streamlit Interface: FrontEnd """
 
-import pandas as pd
+import streamlit as st
+from src.mongo_conn import (
+    MongoDBConnection,
+    QueryMongoDB
+)
 
-# File base imports
-from yt_profile_stats.pipeline.extract import extract_user_pages
-from yt_profile_stats.pipeline.load import dump_data_to_db
+def create_st_tabs():
+    """ Method to st.tabs() """
+    add_channel_tab, query_channel_tab = st.tabs(
+        [
+            "Add Channel",
+            "Query Channel"
+        ]
+    )
+    return add_channel_tab, query_channel_tab
 
-def run_pipeline(channel_name):
-    """Orchestrates the ETL pipeline for fetching and processing YouTube profile data."""
-    try:
-        # Extract
-        json_data = extract_user_pages(channel_name=channel_name)
-        # Load
-        dump_data_to_db(resp=json_data)
-    except Exception as err:
-        print('Error Occured: %s', err)
+def create_st_selectbox(unique_channels):
+    """ Method to create st.selectbox """
+    return st.selectbox("Select a YouTube Channel", unique_channels)
 
 if __name__ == "__main__":
-    df = pd.read_csv('youtubers_list.csv')
-    for index, row in df.iterrows():
-        channelName = row['YouTube URL']
-        run_pipeline(channel_name=channelName.split("/@")[1])
-        print('Finished executing for username: %s', channelName.split("/@")[1])
 
-    print('Finished Executing Script..')
+    # Get MongoDB collection
+    client = MongoDBConnection.get_database("st-db")
+    collection = client["st-youtube_analytics"]
+    query = QueryMongoDB(collection=collection)
+
+    all_documents = query.get_all_documents()
+    unique_channels = query.get_distinct_channel_names(all_docs=all_documents)
+
+    # st tab
+    tabs = create_st_tabs()
+
+    with tabs[0]:
+        st.write('In progress')
+    with tabs[1]:
+        selected_channel = create_st_selectbox(unique_channels)
+        channel_stats = query.get_documents_by_channel_name(all_docs=all_documents, channel_name=selected_channel)
+        st.write(channel_stats)
