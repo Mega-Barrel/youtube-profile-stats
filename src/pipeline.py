@@ -5,7 +5,7 @@ from typing import Optional, Dict
 
 from pymongo.errors import PyMongoError
 
-from mongo_conn import MongoDBConnection
+from src.mongo_conn import MongoDBConnection
 from youtube_connection import YouTubeAPIConnection
 
 class Extract:
