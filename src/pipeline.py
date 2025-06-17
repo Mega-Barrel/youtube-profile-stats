@@ -174,7 +174,7 @@ def run_etl_for_channel(channel_id: str, stats_collection: Collection, users_col
             user_store
         ).insert_channel_stats(transformed)
     else:
-        print(f"⚠️ Skipped channel {channel_id}: no data or failed transformation.")
+        print(f"Skipped channel {channel_id}: no data or failed transformation.")
 
 
 def main() -> None:
