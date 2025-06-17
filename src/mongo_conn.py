@@ -97,7 +97,7 @@ class BaseMongoStore:
         """
         self.collection = collection
 
-    def get_all_documents(self) -> List[Document]:
+    def get_all_documents(self, channel_name = None) -> List[Document]:
         """
         Retrieves all documents in the collection.
 
@@ -105,26 +105,12 @@ class BaseMongoStore:
             List[Document]: A list of documents, or empty list on failure.
         """
         try:
-            return list(self.collection.find({}))
+            if channel_name is None:
+                return list(self.collection.find({}))
+            else:
+                return list(self.collection.find({"channel_name": channel_name}))
         except PyMongoError as error:
             logger.error(f"Error retrieving documents: {error}")
-            return []
-
-    def get_documents_by_field(self, field: str, value: Any) -> List[Document]:
-        """
-        Retrieves documents matching a specific field value.
-
-        Args:
-            field (str): The field name to filter on.
-            value (Any): The value to match.
-
-        Returns:
-            List[Document]: Matching documents or an empty list on failure.
-        """
-        try:
-            return list(self.collection.find({field: value}))
-        except PyMongoError as error:
-            logger.error(f"Error retrieving documents by '{field}': {error}")
             return []
 
 # ---------------------- YouTube User Metadata Store ----------------------
